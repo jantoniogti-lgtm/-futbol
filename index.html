@@ -1,303 +1,45 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IPTV Fútbol — Agenda</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IPTV Fútbol — Agenda TV</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#06101b;color:#f7f9fc;font-family:Arial,sans-serif}
-header{height:66px;background:#08121e;border-bottom:1px solid #26394e;display:flex;align-items:center;padding:0 22px;gap:18px;position:sticky;top:0;z-index:20}
-.logo{font-size:28px;font-weight:900}.logo span{color:#159bff}.right{margin-left:auto;color:#b9c6d4}
-.hero{padding:34px 5%;background:linear-gradient(90deg,#06101ded,#0b2940c0),url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1600&q=85") center/cover}
-.hero h1{font-size:42px;margin:0 0 7px}.hero p{color:#bdc9d5;margin:0}
-main{max-width:1450px;margin:auto;padding:20px 24px}
-.days{display:grid;grid-template-columns:repeat(7,1fr);gap:9px}
-.day{padding:12px 8px;border-radius:12px;background:#101d2b;border:1px solid #26394e;text-align:center;cursor:pointer;transition:.2s}
-.day:hover{transform:translateY(-1px)}.day b{display:block}.day small{color:#91a1b3}.day.active{background:#159bff!important;border-color:#159bff!important}.day.today:not(.active){border-color:#159bff}
-.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}
-.filter{padding:11px 14px;white-space:nowrap;border-radius:10px;background:#101d2b;border:1px solid #26394e;color:#dce5ef;cursor:pointer}
-.filter.active{background:#159bff;border-color:#159bff;color:white}
-.status{color:#9aabbc;font-size:13px;margin:10px 0}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#2bd673;margin-right:6px}
-.section-title{margin:22px 0 9px;font-size:18px}
-.match{display:grid;grid-template-columns:75px 125px 1fr 260px 45px;gap:13px;align-items:center;background:#101d2b;border:1px solid #20344a;border-radius:14px;padding:13px 15px;margin:8px 0}
-.time{font-size:22px;font-weight:900}.comp{font-size:11px;color:#a8b7c8;font-weight:800}
-.teams{display:flex;justify-content:center;align-items:center;gap:22px}.team{text-align:center;font-weight:700;min-width:125px}
-.crest{width:50px;height:50px;object-fit:contain;display:block;margin:auto auto 5px;border-radius:8px}
-.crest.fallback{background:#25384b;padding:7px}.score{font-size:22px;font-weight:900;min-width:55px;text-align:center}
-.channels{display:flex;justify-content:center;flex-wrap:wrap;gap:5px}.channel{font-size:10px;font-weight:800;background:#07111c;border:1px solid #2a4055;border-radius:7px;padding:7px}
-.event{text-align:center;color:#aebccc;font-size:11px}.live{color:#ff5965;font-weight:900}.finished{color:#8798aa;font-weight:900}.scheduled{color:#6aaef0;font-weight:900}
-.play{border:0;width:44px;height:44px;border-radius:50%;background:#263a50;color:white;cursor:pointer}.play:hover{background:#159bff}
-.empty{padding:35px;text-align:center;background:#0d1926;border:1px dashed #2b4157;border-radius:14px;color:#94a5b7}
-.overlay{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;padding:18px;z-index:50}
-.modal{max-width:620px;width:100%;background:#0c1927;border:1px solid #294159;border-radius:18px;padding:22px;box-shadow:0 20px 60px #0008}
-.modal-head{display:flex;justify-content:space-between;gap:15px}.close{border:0;background:#1b2b3c;color:#fff;border-radius:9px;width:38px;height:38px;cursor:pointer}
-.detail-teams{display:flex;align-items:center;justify-content:center;gap:28px;margin:22px 0}.detail-team{text-align:center;font-weight:800}.detail-team img{width:70px;height:70px;object-fit:contain;display:block;margin:auto auto 8px}
-.detail-score{font-size:30px;font-weight:900}.small{color:#91a1b3;font-size:13px}.fav{border:0;background:none;color:#ffd34d;font-size:24px;cursor:pointer}
-@media(max-width:900px){.days{grid-template-columns:repeat(7,105px);overflow:auto;padding-bottom:3px}.match{grid-template-columns:60px 1fr 45px;gap:7px}.comp{grid-column:2}.teams{grid-column:1/3}.channels{grid-column:1/3;justify-content:flex-start}.event{grid-column:1/3;text-align:left}.play{grid-column:3;grid-row:1/5}}
-@media(max-width:600px){.hero{padding:28px 17px}.hero h1{font-size:29px}main{padding:14px 10px}.team{min-width:95px;font-size:13px}.teams{gap:8px}.crest{width:44px;height:44px}}
-</style>
-</head>
+*{box-sizing:border-box}body{margin:0;background:#06101a;color:#f5f8fb;font-family:Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#081520;border-bottom:1px solid #263a50;padding:14px 20px;display:flex;align-items:center}.logo{font-size:25px;font-weight:900}.logo span{color:#159cff}.src{margin-left:auto;color:#8fa3b6;font-size:12px}
+.hero{padding:30px 5%;background:linear-gradient(90deg,#06101eee,#0b2d46cc)}h1{margin:0;font-size:35px}.sub{color:#9fb0c1;margin-top:7px}
+main{max-width:1500px;margin:auto;padding:18px}.days{display:flex;gap:8px;overflow:auto;padding-bottom:5px}.day{min-width:125px;padding:11px 8px;background:#101e2c;border:1px solid #294057;color:#fff;border-radius:12px;cursor:pointer}.day.active{background:#159cff;border-color:#159cff}.day b{display:block}.day small{color:#b4c1ce}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.btn{background:#101e2c;border:1px solid #294057;color:#e1e8ef;border-radius:9px;padding:10px 13px;cursor:pointer}.btn.active{background:#159cff;border-color:#159cff}
+.info{font-size:12px;color:#8fa3b6;margin:8px 0 14px}.match{display:grid;grid-template-columns:68px 150px 1fr 330px 50px;gap:12px;align-items:center;background:#101e2c;border:1px solid #243b52;border-radius:14px;padding:12px;margin:8px 0}
+.time{font-size:20px;font-weight:900}.comp{font-size:11px;color:#a7b6c5;font-weight:800}.teams{display:flex;align-items:center;justify-content:center;gap:18px}.team{text-align:center;font-weight:700;min-width:120px}.crest{width:48px;height:48px;object-fit:contain;margin:auto auto 5px;display:block;border-radius:8px;background:#1b2e41}.score{font-size:19px;font-weight:900}.channels{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}.ch{font-size:10px;font-weight:800;background:#07111c;border:1px solid #30475d;border-radius:7px;padding:6px}.detail{text-align:center}.live{color:#ff5c69;font-weight:900}.empty{padding:30px;text-align:center;color:#91a5b8;background:#0c1825;border:1px dashed #2a4057;border-radius:14px}
+@media(max-width:900px){.match{grid-template-columns:60px 1fr 45px}.comp{grid-column:2}.teams,.channels{grid-column:1/3}.teams{grid-row:2}.channels{justify-content:flex-start}.detail{grid-column:3;grid-row:1/4}.team{min-width:90px}}
+@media(max-width:550px){h1{font-size:28px}.match{padding:10px}.team{font-size:12px}.crest{width:42px;height:42px}}
+</style></head>
 <body>
-<header><div>☰</div><div class="logo">IPTV<span>▶</span></div><div class="right">⚽ FÚTBOL</div></header>
-<section class="hero"><h1>PARTIDOS DE FÚTBOL</h1><p>🔴 En directo · ⏰ Próximos · 🏁 Finalizados</p></section>
-
-<main>
-  <div id="days" class="days"></div>
-
-  <div class="toolbar">
-    <button id="leagueBtn" class="filter" onclick="cycleLeague()">🏆 Todos</button>
-    <button id="channelBtn" class="filter" onclick="toggleChannels()">📺 Canales</button>
-    <button id="favBtn" class="filter" onclick="toggleFavorites()">⭐ Favoritos</button>
-    <button class="filter" onclick="loadAll(true)">↻ Actualizar</button>
-  </div>
-
-  <div class="status"><span class="dot"></span><span id="status">Cargando partidos…</span></div>
-  <div id="content"></div>
-</main>
-
-<div id="overlay" class="overlay" onclick="if(event.target===this)closeModal()">
-  <div id="modal" class="modal"></div>
+<header><div class="logo">IPTV<span>▶</span> FÚTBOL</div><div class="src">FUENTE: FÚTBOL TV</div></header>
+<section class="hero"><h1>PARTIDOS DE FÚTBOL</h1><div class="sub">Horarios y canales de televisión en España</div></section>
+<main><div id="days" class="days"></div>
+<div class="filters">
+<button class="btn active" onclick="fc('TODOS',this)">🏆 Todos</button>
+<button class="btn" onclick="fc('Liga EA Sports',this)">🇪🇸 LaLiga</button>
+<button class="btn" onclick="fc('Premier League',this)">🏴 Premier</button>
+<button class="btn" onclick="fc('Europa League',this)">🌍 Europa League</button>
+<button class="btn" onclick="fc('Serie A Italia',this)">🇮🇹 Serie A</button>
+<button class="btn" onclick="fc('Bundesliga',this)">🇩🇪 Bundesliga</button>
+<button class="btn" onclick="fc('Ligue 1',this)">🇫🇷 Ligue 1</button>
+<button class="btn" onclick="fc('Liga Hypermotion',this)">🇪🇸 Segunda</button>
 </div>
-
+<div class="info" id="status">Cargando…</div><div id="content"></div></main>
 <script>
-const API="https://worldcup26.ir/get/soccer";
-const leagues=[
-  {id:"esp.1",name:"LALIGA EA SPORTS",group:"ESPAÑA",channels:["DAZN","DAZN LaLiga","Movistar LALIGA"]},
-  {id:"eng.1",name:"PREMIER LEAGUE",group:"PREMIER",channels:["DAZN","DAZN 1"]}
-];
-
-let data=[], selected=today(), leagueFilter="TODOS", onlyChannels=false, onlyFavorites=false;
-let logos={};
-let loading=false;
-
-function today(){
-  const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
-}
-function addDays(iso,n){
-  const d=new Date(iso+"T12:00:00"); d.setDate(d.getDate()+n);
-  return d.toISOString().slice(0,10);
-}
-function labelDay(d){
-  if(d===today()) return "HOY";
-  return new Date(d+"T12:00:00").toLocaleDateString("es-ES",{weekday:"short"}).toUpperCase();
-}
-function localDate(s){
-  if(!s)return today();
-  const d=new Date(s); if(isNaN(d)) return String(s).slice(0,10);
-  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
-}
-function localTime(s){
-  if(!s)return "--:--";
-  const d=new Date(s); if(isNaN(d)) return String(s).slice(11,16)||"--:--";
-  return d.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"});
-}
-function cleanName(n){return (n||"").trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();}
-function favKey(m){return "fav_"+(m.id||cleanName(m.home)+"_"+cleanName(m.away)+"_"+m.date);}
-function isFav(m){return localStorage.getItem(favKey(m))==="1";}
-function toggleFav(m){
-  const k=favKey(m);
-  if(isFav(m))localStorage.removeItem(k); else localStorage.setItem(k,"1");
-  render(selected);
-}
-function esc(s){return String(s??"").replace(/[&<>"']/g,x=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[x]));}
-
-function teamLogo(team){
-  return team?.logo || team?.logos?.[0]?.href || team?.logos?.[0]?.url || "";
-}
-function parseArray(j){
-  if(Array.isArray(j)) return j;
-  return j?.events||j?.data||j?.matches||j?.fixtures||j?.games||j?.clubs||j?.teams||[];
-}
-function norm(j,league){
-  return parseArray(j).map((e,i)=>{
-    const c=e.competitions?.[0]||e.competition||{};
-    const t=c.competitors||e.competitors||[];
-    const h=t.find(x=>x.homeAway==="home")||t[0]||e.homeTeam||{};
-    const a=t.find(x=>x.homeAway==="away")||t[1]||e.awayTeam||{};
-    const s=e.status?.type||e.status||{};
-    const state=s.completed||s.state==="post"||s.type==="finished"?"finished":(s.state==="in"||s.type==="live"?"live":"scheduled");
-    const hs=h.score??h.score?.displayValue??e.homeScore;
-    const as=a.score??a.score?.displayValue??e.awayScore;
-    const home=h.team||h, away=a.team||a;
-    return {
-      id:e.id||i,
-      date:localDate(e.date||e.startTime||e.kickoffAt||e.datetime),
-      time:localTime(e.date||e.startTime||e.kickoffAt||e.datetime),
-      competition:league.name,
-      group:league.group,
-      home:home.displayName||home.name||"Local",
-      away:away.displayName||away.name||"Visitante",
-      status:state,
-      minute:e.status?.displayClock||e.minute||"",
-      score:(hs!=null&&as!=null)?{home:Number(hs),away:Number(as)}:null,
-      events:e.events||e.plays||[],
-      channels:e.channels||e.tvChannels||league.channels,
-      homeLogo:teamLogo(home),
-      awayLogo:teamLogo(away)
-    };
-  }).filter(x=>x.home&&x.away);
-}
-
-async function fetchJson(url){
-  const r=await fetch(url,{cache:"no-store"});
-  if(!r.ok) throw new Error("HTTP "+r.status);
-  return r.json();
-}
-
-async function fetchClubs(league){
-  try{
-    const j=await fetchJson(`${API}/${league.id}/clubs`);
-    parseArray(j).forEach(c=>{
-      const name=c.name||c.displayName||c.team?.name;
-      const logo=c.logo||c.team?.logo||c.logos?.[0]?.href||c.logos?.[0]?.url;
-      if(name&&logo)logos[cleanName(name)]=logo;
-    });
-  }catch(e){}
-}
-
-function enrichLogos(){
-  data.forEach(m=>{
-    m.homeLogo=m.homeLogo||logos[cleanName(m.home)]||"";
-    m.awayLogo=m.awayLogo||logos[cleanName(m.away)]||"";
-  });
-}
-
-async function loadAll(force=false){
-  if(loading)return;
-  loading=true;
-  document.getElementById("status").textContent="Actualizando 7 días…";
-  const start=today(), dates=Array.from({length:7},(_,i)=>addDays(start,i));
-  let all=[];
-
-  // Cargamos logos una sola vez por sesión.
-  if(Object.keys(logos).length===0) await Promise.all(leagues.map(fetchClubs));
-
-  for(const l of leagues){
-    const results=await Promise.allSettled(dates.map(d=>{
-      const ds=d.replaceAll("-","");
-      return fetchJson(`${API}/${l.id}/scoreboard?dates=${ds}`).then(j=>norm(j,l));
-    }));
-    results.forEach(r=>{if(r.status==="fulfilled")all.push(...r.value)});
-  }
-
-  data=dedupe(all);
-  enrichLogos();
-
-  if(!data.length){
-    data=fallback.filter(m=>m.date>=start && m.date<=dates[6]);
-    enrichLogos();
-    document.getElementById("status").textContent="Fuente no disponible · mostrando datos de respaldo";
-  }else{
-    document.getElementById("status").textContent=`Partidos reales · ${new Date().toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"})}`;
-  }
-  selected=start;
-  drawDays(dates);
-  render(selected);
-  loading=false;
-}
-function dedupe(arr){
-  const map=new Map();
-  arr.forEach(m=>map.set(`${m.id}|${m.date}|${m.home}|${m.away}`,m));
-  return [...map.values()].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
-}
-
-const fallback=[
- {id:"f1",date:today(),time:"19:00",competition:"PREMIER LEAGUE",group:"PREMIER",home:"Leeds United",away:"Newcastle United",status:"scheduled",score:null,events:[],channels:["DAZN"],homeLogo:"",awayLogo:""},
- {id:"f2",date:today(),time:"21:00",competition:"LALIGA EA SPORTS",group:"ESPAÑA",home:"Villarreal CF",away:"Real Betis",status:"scheduled",score:null,events:[],channels:["Movistar LALIGA","DAZN"],homeLogo:"",awayLogo:""}
-];
-
-function drawDays(dates){
-  document.getElementById("days").innerHTML=dates.map(d=>`
-    <button class="day ${d===selected?"active ":""}${d===today()?"today":""}" onclick="selectDay('${d}')">
-      <b>${labelDay(d)}</b>
-      <small>${new Date(d+"T12:00:00").toLocaleDateString("es-ES",{day:"2-digit",month:"short"})}</small>
-    </button>`).join("");
-}
-function selectDay(d){selected=d;drawDays(Array.from({length:7},(_,i)=>addDays(today(),i)));render(d);}
-function cycleLeague(){
-  leagueFilter=leagueFilter==="TODOS"?"ESPAÑA":leagueFilter==="ESPAÑA"?"PREMIER":"TODOS";
-  const b=document.getElementById("leagueBtn");b.textContent="🏆 "+(leagueFilter==="TODOS"?"Todos":leagueFilter);
-  b.classList.toggle("active",leagueFilter!=="TODOS");render(selected);
-}
-function toggleChannels(){onlyChannels=!onlyChannels;document.getElementById("channelBtn").classList.toggle("active",onlyChannels);render(selected);}
-function toggleFavorites(){onlyFavorites=!onlyFavorites;document.getElementById("favBtn").classList.toggle("active",onlyFavorites);render(selected);}
-
-function imgLogo(url,name){
-  if(url)return `<img class="crest" src="${esc(url)}" alt="" onerror="this.onerror=null;this.src='';this.classList.add('fallback');this.outerHTML='<div class=&quot;crest fallback&quot;>⚽</div>'">`;
-  return `<div class="crest fallback">⚽</div>`;
-}
-
-function card(m){
-  const score=m.score?`<div class="score">${m.score.home} - ${m.score.away}</div>`:"<div class='score'>VS</div>";
-  const st=m.status==="live"?`<span class="live">🔴 EN DIRECTO ${esc(m.minute||"")}</span>`:m.status==="finished"?`<span class="finished">🏁 FINALIZADO</span>`:`<span class="scheduled">⏰ PRÓXIMO</span>`;
-  return `<article class="match">
-    <div class="time">${esc(m.time)}</div>
-    <div class="comp">${esc(m.competition)}</div>
-    <div class="teams">
-      <div class="team">${imgLogo(m.homeLogo,m.home)}${esc(m.home)}</div>
-      ${score}
-      <div class="team">${imgLogo(m.awayLogo,m.away)}${esc(m.away)}</div>
-    </div>
-    <div class="channels">${(m.channels||[]).map(x=>`<span class="channel">${esc(x)}</span>`).join("")}</div>
-    <div class="event">${st}</div>
-    <button class="play" title="Ver detalles" onclick='openModal(${JSON.stringify(m).replace(/</g,"\\u003c")})'>▶</button>
-  </article>`;
-}
-
-function filtered(day){
-  return data.filter(m=>m.date===day)
-    .filter(m=>leagueFilter==="TODOS"||m.group===leagueFilter)
-    .filter(m=>!onlyChannels||(m.channels&&m.channels.length))
-    .filter(m=>!onlyFavorites||isFav(m));
-}
-function render(d){
-  const x=filtered(d);
-  let h=`<h2>${d===today()?"HOY":new Date(d+"T12:00:00").toLocaleDateString("es-ES",{weekday:"long",day:"numeric",month:"long"})}</h2>`;
-  const groups=[
-    ["🔴 EN DIRECTO",x.filter(m=>m.status==="live")],
-    ["⏰ PRÓXIMAMENTE",x.filter(m=>m.status==="scheduled")],
-    ["🏁 FINALIZADOS",x.filter(m=>m.status==="finished")]
-  ];
-  groups.forEach(g=>{if(g[1].length)h+=`<h3 class="section-title">${g[0]}</h3>`+g[1].map(card).join("")});
-  document.getElementById("content").innerHTML=h+(x.length?"":`<div class="empty">No hay partidos para este día con los filtros seleccionados.</div>`);
-}
-
-function openModal(m){
-  const fav=isFav(m);
-  const score=m.score?`${m.score.home} - ${m.score.away}`:"VS";
-  document.getElementById("modal").innerHTML=`
-    <div class="modal-head"><div><div class="small">${esc(m.competition)} · ${esc(m.date)} · ${esc(m.time)}</div><h2>Detalle del partido</h2></div><button class="close" onclick="closeModal()">✕</button></div>
-    <div class="detail-teams">
-      <div class="detail-team">${imgLogo(m.homeLogo,m.home)}${esc(m.home)}</div>
-      <div class="detail-score">${score}</div>
-      <div class="detail-team">${imgLogo(m.awayLogo,m.away)}${esc(m.away)}</div>
-    </div>
-    <p>${m.status==="live"?`🔴 EN DIRECTO ${esc(m.minute||"")}`:m.status==="finished"?"🏁 FINALIZADO":"⏰ PRÓXIMO"}</p>
-    <p><b>📺 Canales:</b> ${(m.channels||[]).map(esc).join(" · ")||"No indicado"}</p>
-    <p><button class="fav" onclick='toggleFav(${JSON.stringify(m).replace(/</g,"\\u003c")});closeModal()'>${fav?"★ Quitar de favoritos":"☆ Añadir a favoritos"}</button></p>
-    <p class="small">El botón ▶ muestra la ficha del partido. No abre una señal de streaming.</p>`;
-  document.getElementById("overlay").style.display="flex";
-}
-function closeModal(){document.getElementById("overlay").style.display="none";}
-
-loadAll();
-setInterval(()=>loadCurrentDay(),60000);
-
-async function loadCurrentDay(){
-  const d=today(), fresh=[];
-  for(const l of leagues){
-    try{
-      const j=await fetchJson(`${API}/${l.id}/scoreboard?dates=${d.replaceAll("-","")}`);
-      fresh.push(...norm(j,l));
-    }catch(e){}
-  }
-  if(fresh.length){
-    data=data.filter(m=>m.date!==d);
-    data.push(...fresh);data=dedupe(data);enrichLogos();render(selected);
-    document.getElementById("status").textContent=`Partidos actualizados · ${new Date().toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"})}`;
-  }
-}
-</script>
-</body>
-</html>
+let all=[],selected=today(),filter='TODOS';
+function today(){let d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function add(s,n){let d=new Date(s+'T12:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function dayname(d){return d===today()?'HOY':new Date(d+'T12:00:00').toLocaleDateString('es-ES',{weekday:'short'}).toUpperCase()}
+function days(){daysEl.innerHTML=Array.from({length:7},(_,i)=>add(today(),i)).map(d=>`<button class="day ${d===selected?'active':''}" onclick="selected='${d}';days();render()"><b>${dayname(d)}</b><small>${new Date(d+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short'})}</small></button>`).join('')}
+function fc(f,b){filter=f;document.querySelectorAll('.btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
+function img(u){return u?`<img class="crest" src="${esc(u)}" onerror="this.onerror=null;this.outerHTML='<div class=&quot;crest&quot;>⚽</div>'">`:'<div class="crest">⚽</div>'}
+function card(m){let state=m.status==='live'?`<span class="live">🔴 ${esc(m.minute||'EN DIRECTO')}</span>`:m.status==='finished'?'🏁 FINALIZADO':'⏰ PRÓXIMO';let score=m.score?`${m.score.home} - ${m.score.away}`:'VS';return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team">${img(m.homeLogo)}${esc(m.home)}</div><div class="score">${score}</div><div class="team">${img(m.awayLogo)}${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div><div class="detail">${state}</div></article>`}
+function render(){let x=all.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));let t=selected===today()?'HOY':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});content.innerHTML=`<h2>${t}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día.</div>')}
+const daysEl=document.getElementById('days');
+fetch('matches.json?'+Date.now()).then(r=>r.json()).then(j=>{all=j;days();render();status.textContent='Agenda actualizada automáticamente desde Fútbol TV.'}).catch(()=>status.textContent='No se pudo cargar matches.json.');
+</script></body></html>

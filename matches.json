@@ -1,0 +1,123 @@
+[
+  {
+    "id": "2026-09-14_21:00_Villarreal_Betis",
+    "date": "2026-09-14",
+    "time": "21:00",
+    "competition": "Liga EA Sports",
+    "home": "Villarreal",
+    "away": "Betis",
+    "channels": [
+      "M+ LaLiga",
+      "Movistar Plus+",
+      "Orange Fútbol 1"
+    ],
+    "status": "scheduled",
+    "score": null,
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "id": "2026-09-14_21:00_Leeds_Newcastle",
+    "date": "2026-09-14",
+    "time": "21:00",
+    "competition": "Premier League",
+    "home": "Leeds Utd",
+    "away": "Newcastle",
+    "channels": [
+      "DAZN",
+      "DAZN 1"
+    ],
+    "status": "scheduled",
+    "score": null,
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "id": "2026-09-15_21:30_Elche_RealMadrid",
+    "date": "2026-09-15",
+    "time": "21:30",
+    "competition": "Liga EA Sports",
+    "home": "Elche",
+    "away": "Real Madrid",
+    "channels": [
+      "M+ LaLiga",
+      "Movistar Plus+",
+      "Orange Fútbol 1"
+    ],
+    "status": "scheduled",
+    "score": null,
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "id": "2026-09-16_21:30_Barcelona_Racing",
+    "date": "2026-09-16",
+    "time": "21:30",
+    "competition": "Liga EA Sports",
+    "home": "Barcelona",
+    "away": "Racing de Santander",
+    "channels": [
+      "DAZN LaLiga",
+      "DAZN"
+    ],
+    "status": "scheduled",
+    "score": null,
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "id": "2026-09-17_21:00_RealSociedad_Bournemouth",
+    "date": "2026-09-17",
+    "time": "21:00",
+    "competition": "Europa League",
+    "home": "Real Sociedad",
+    "away": "Bournemouth",
+    "channels": [
+      "Movistar Plus+"
+    ],
+    "status": "scheduled",
+    "score": null,
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "id": "2026-09-19_21:00_Sevilla_Barcelona",
+    "date": "2026-09-19",
+    "time": "21:00",
+    "competition": "Liga EA Sports",
+    "home": "Sevilla",
+    "away": "Barcelona",
+    "channels": [
+      "M+ LaLiga",
+      "Movistar Plus+",
+      "Orange Fútbol 1"
+    ],
+    "status": "scheduled",
+    "score": null,
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "id": "2026-09-20_16:15_Atletico_RealMadrid",
+    "date": "2026-09-20",
+    "time": "16:15",
+    "competition": "Liga EA Sports",
+    "home": "Atlético de Madrid",
+    "away": "Real Madrid",
+    "channels": [
+      "DAZN LaLiga",
+      "DAZN"
+    ],
+    "status": "scheduled",
+    "score": null,
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  }
+]
