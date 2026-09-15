@@ -1,6 +1,6 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IPTV Fútbol</title><style>
-*{box-sizing:border-box}body{margin:0;background:#07111b;color:#f4f7fa;font-family:Arial,sans-serif}header{background:#091622;border-bottom:1px solid #24384d;padding:15px 22px;display:flex;align-items:center;position:sticky;top:0;z-index:5}.logo{font-size:25px;font-weight:900}.logo b{color:#159cff}.src{margin-left:auto;color:#91a3b5;font-size:12px}.hero{padding:28px 5%;background:#0b2235}h1{margin:0;font-size:34px}.sub{color:#9fb0c1;margin-top:6px}.wrap{max-width:1450px;margin:auto;padding:18px}.days{display:flex;gap:8px;overflow:auto;margin-bottom:14px}.day{min-width:125px;padding:11px;background:#101e2c;border:1px solid #2a4056;color:#fff;border-radius:11px;cursor:pointer}.day.active{background:#159cff;border-color:#159cff}.day b,.day small{display:block}.day small{color:#b8c5d1;margin-top:3px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.btn{background:#101e2c;color:#e4eaf0;border:1px solid #2a4056;border-radius:8px;padding:9px 12px;cursor:pointer}.btn.active{background:#159cff;border-color:#159cff}.status{font-size:12px;color:#91a4b6;margin-bottom:12px}.match{display:grid;grid-template-columns:65px 145px 1fr 330px;background:#101e2c;border:1px solid #243b52;border-radius:13px;padding:11px;margin:8px 0;align-items:center;gap:12px}.time{font-size:20px;font-weight:900}.comp{font-size:11px;font-weight:800;color:#aab9c8}.teams{display:flex;align-items:center;justify-content:center;gap:18px}.team{text-align:center;font-weight:700;min-width:120px}.crest{width:52px;height:52px;object-fit:contain;margin:0 auto 5px;display:block}.fallback{font-weight:900}.fallback{border-radius:50%;background:#1c3044;display:flex;align-items:center;justify-content:center;font-size:13px;color:#dce6ef}.channels{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}.ch{background:#07111b;border:1px solid #30465b;border-radius:7px;padding:6px;font-size:10px;font-weight:800}.empty{padding:30px;text-align:center;color:#91a4b6;border:1px dashed #2a4056;border-radius:13px}@media(max-width:900px){.match{grid-template-columns:60px 1fr}.comp{grid-column:2}.teams,.channels{grid-column:1/3}.teams{grid-row:2}.channels{justify-content:flex-start}.team{min-width:90px}}@media(max-width:550px){h1{font-size:28px}.team{font-size:12px}.crest{width:42px;height:42px}}
+<title>IPTV Fútbol · Agenda</title><style>
+*{box-sizing:border-box}body{margin:0;background:#07111b;color:#f4f7fa;font-family:Arial,sans-serif}header{background:#091622;border-bottom:1px solid #24384d;padding:15px 22px;display:flex;align-items:center;position:sticky;top:0;z-index:5}.logo{font-size:25px;font-weight:900}.logo b{color:#159cff}.src{margin-left:auto;color:#91a3b5;font-size:12px}.hero{padding:28px 5%;background:#0b2235}h1{margin:0;font-size:34px}.sub{color:#9fb0c1;margin-top:6px}.wrap{max-width:1450px;margin:auto;padding:18px}.days{display:flex;gap:8px;overflow:auto;margin-bottom:14px}.day{min-width:125px;padding:11px;background:#101e2c;border:1px solid #2a4056;color:#fff;border-radius:11px;cursor:pointer}.day.active{background:#159cff;border-color:#159cff}.day b,.day small{display:block}.day small{color:#b8c5d1;margin-top:3px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.btn{background:#101e2c;color:#e4eaf0;border:1px solid #2a4056;border-radius:8px;padding:9px 12px;cursor:pointer}.btn.active{background:#159cff;border-color:#159cff}.status{font-size:12px;color:#91a4b6;margin-bottom:12px}.match{display:grid;grid-template-columns:65px 145px 1fr 330px;background:#101e2c;border:1px solid #243b52;border-radius:13px;padding:11px;margin:8px 0;align-items:center;gap:12px}.time{font-size:20px;font-weight:900}.comp{font-size:11px;font-weight:800;color:#aab9c8}.teams{display:flex;align-items:center;justify-content:center;gap:18px}.team{text-align:center;font-weight:700;min-width:120px}.crest{width:58px;height:58px;object-fit:contain;margin:0 auto 5px;display:block;background:transparent;border:0;box-shadow:none}.fallback{font-weight:900;display:flex;align-items:center;justify-content:center;font-size:13px;color:#dce6ef;background:transparent}.channels{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}.ch{background:#07111b;border:1px solid #30465b;border-radius:7px;padding:6px;font-size:10px;font-weight:800}.empty{padding:30px;text-align:center;color:#91a4b6;border:1px dashed #2a4056;border-radius:13px}@media(max-width:900px){.match{grid-template-columns:60px 1fr}.comp{grid-column:2}.teams,.channels{grid-column:1/3}.teams{grid-row:2}.channels{justify-content:flex-start}.team{min-width:90px}}@media(max-width:550px){h1{font-size:28px}.team{font-size:12px}.crest{width:42px;height:42px}}
 </style></head><body><header><div class="logo">IPTV<b>▶</b> FÚTBOL</div><div class="src">AGENDA DE FÚTBOL</div></header><section class="hero"><h1>PARTIDOS DE FÚTBOL</h1><div class="sub">Horarios y canales de televisión en España</div></section><main class="wrap"><div id="days" class="days"></div><div class="filters" id="filters"></div><div id="status" class="status">Cargando agenda…</div><div id="content"></div></main>
 <script>
 let data=[],selected=today(),filter='TODOS';
@@ -14,37 +14,16 @@ function drawDays(){daysEl.innerHTML=Array.from({length:7},(_,i)=>add(today(),i)
 const comps=[['TODOS','🏆 Todos'],['Liga EA Sports','🇪🇸 LaLiga'],['Premier League','🏴 Premier'],['Europa League','🌍 Europa'],['Serie A Italia','🇮🇹 Serie A'],['Bundesliga','🇩🇪 Bundesliga'],['Ligue 1','🇫🇷 Ligue 1'],['Liga Hypermotion','🇪🇸 Segunda'],['Primera Federación','🇪🇸 1ª Federación'],['Liga F','♀️ Liga F']];
 document.getElementById('filters').innerHTML=comps.map((x,i)=>`<button class="btn ${i===0?'active':''}" onclick="setFilter('${x[0]}',this)">${x[1]}</button>`).join('');
 function setFilter(x,b){filter=x;document.querySelectorAll('.btn').forEach(y=>y.classList.remove('active'));b.classList.add('active');render()}
-const logoCache={};
-async function getLogo(team){
-  const key=team.toLowerCase().trim();
-  if(key in logoCache)return logoCache[key];
-  try{
-    const q=encodeURIComponent(team);
-    const r=await fetch(`https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=${q}`,{cache:'force-cache'});
-    if(r.ok){
-      const j=await r.json();
-      const exact=(j.teams||[]).find(x=>(x.strTeam||'').toLowerCase()===key);
-      const t=exact||(j.teams||[])[0];
-      if(t && t.strBadge){logoCache[key]=t.strBadge;return t.strBadge}
-    }
-  }catch(e){}
-  logoCache[key]='';
-  return '';
-}
-function badge(team){
-  const id='badge_'+Math.random().toString(36).slice(2);
+function badge(team,url){
+  const name=esc(team||'');
   const initials=esc((team||'⚽').split(' ').filter(Boolean).map(x=>x[0]).slice(0,2).join('').toUpperCase());
-  setTimeout(async()=>{
-    const u=await getLogo(team);
-    const el=document.getElementById(id);
-    if(el&&u){
-      el.innerHTML=`<img class="crest" src="${esc(u)}" alt="${esc(team)}" loading="lazy" onerror="this.style.display='none'">`;
-    }
-  },0);
-  return `<div class="crest fallback" id="${id}">${initials}</div>`;
+  if(url){
+    return `<div class="crestBox"><img class="crest" src="${esc(url)}" alt="${name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback" style="display:none">${initials}</span></div>`;
+  }
+  return `<div class="crestBox"><span class="fallback">${initials}</span></div>`;
 }
 function card(m){
-  return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team">${badge(m.home)}${esc(m.home)}</div><div class="score">VS</div><div class="team">${badge(m.away)}${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div></article>`;
+  return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team">${badge(m.home,m.homeLogo)}${esc(m.home)}</div><div class="score">VS</div><div class="team">${badge(m.away,m.awayLogo)}${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div></article>`;
 }
 function render(){let x=data.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));let title=selected===today()?'HOY':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});content.innerHTML=`<h2>${title}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día.</div>')}
 async function start(){try{const r=await fetch('matches.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();data=await r.json();if(!Array.isArray(data))throw Error();drawDays();render();status.textContent='Agenda cargada correctamente · '+data.length+' partidos';}catch(e){status.textContent='No se pudo cargar la agenda';content.innerHTML='<div class="empty">Error al cargar matches.json.</div>'}}
