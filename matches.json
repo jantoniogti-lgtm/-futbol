@@ -83,20 +83,6 @@
     "date": "2026-09-16",
     "time": "19:00",
     "competition": "Liga EA Sports",
-    "home": "Deportivo",
-    "away": "Sevilla",
-    "channels": [
-      "DAZN LaLiga",
-      "DAZN"
-    ],
-    "id": "2026-09-16_19:00_6",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/21_20130125.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/12_20130125.webp"
-  },
-  {
-    "date": "2026-09-16",
-    "time": "19:00",
-    "competition": "Liga EA Sports",
     "home": "Atlético de Madrid",
     "away": "Osasuna",
     "channels": [
@@ -108,16 +94,17 @@
   },
   {
     "date": "2026-09-16",
-    "time": "21:00",
-    "competition": "Europa League",
-    "home": "Olympiacos",
-    "away": "Jagiellonia Bialystok",
+    "time": "19:00",
+    "competition": "Liga EA Sports",
+    "home": "Deportivo",
+    "away": "Sevilla",
     "channels": [
-      "M+ Liga de Campeones 3"
+      "DAZN LaLiga",
+      "DAZN"
     ],
-    "id": "2026-09-16_21:00_8",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/0_20130212.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6526_202503140717.webp"
+    "id": "2026-09-16_19:00_6",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/21_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/12_20130125.webp"
   },
   {
     "date": "2026-09-16",
@@ -134,16 +121,16 @@
   },
   {
     "date": "2026-09-16",
-    "time": "21:30",
-    "competition": "Liga EA Sports",
-    "home": "Levante",
-    "away": "Athletic Club",
+    "time": "21:00",
+    "competition": "Europa League",
+    "home": "Olympiacos",
+    "away": "Jagiellonia Bialystok",
     "channels": [
-      "M+ LaLiga"
+      "M+ Liga de Campeones 3"
     ],
-    "id": "2026-09-16_21:30_10",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/5_20130125.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/10_20130125.webp"
+    "id": "2026-09-16_21:00_8",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/0_20130212.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6526_202503140717.webp"
   },
   {
     "date": "2026-09-16",
@@ -158,6 +145,19 @@
     "id": "2026-09-16_21:30_11",
     "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/2_20130125.webp",
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/20_20130125.webp"
+  },
+  {
+    "date": "2026-09-16",
+    "time": "21:30",
+    "competition": "Liga EA Sports",
+    "home": "Levante",
+    "away": "Athletic Club",
+    "channels": [
+      "M+ LaLiga"
+    ],
+    "id": "2026-09-16_21:30_10",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/5_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/10_20130125.webp"
   },
   {
     "date": "2026-09-17",
@@ -177,19 +177,6 @@
     "date": "2026-09-17",
     "time": "18:45",
     "competition": "Europa League",
-    "home": "OFI Creta",
-    "away": "Hoffenheim",
-    "channels": [
-      "M+ Liga de Campeones 3"
-    ],
-    "id": "2026-09-17_18:45_13",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6679_202609140542.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/369_201808310941.webp"
-  },
-  {
-    "date": "2026-09-17",
-    "time": "18:45",
-    "competition": "Europa League",
     "home": "Levski Sofia",
     "away": "Red Bull Salzburg",
     "channels": [
@@ -198,6 +185,19 @@
     "id": "2026-09-17_18:45_14",
     "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6668_202608160958.webp",
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/388_20180821.webp"
+  },
+  {
+    "date": "2026-09-17",
+    "time": "18:45",
+    "competition": "Europa League",
+    "home": "OFI Creta",
+    "away": "Hoffenheim",
+    "channels": [
+      "M+ Liga de Campeones 3"
+    ],
+    "id": "2026-09-17_18:45_13",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6679_202609140542.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/369_201808310941.webp"
   },
   {
     "date": "2026-09-17",
@@ -217,19 +217,6 @@
     "date": "2026-09-17",
     "time": "21:00",
     "competition": "Europa League",
-    "home": "Real Sociedad",
-    "away": "Bournemouth",
-    "channels": [
-      "Movistar Plus+"
-    ],
-    "id": "2026-09-17_21:00_16",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/14_20130125.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/139_20130712.webp"
-  },
-  {
-    "date": "2026-09-17",
-    "time": "21:00",
-    "competition": "Europa League",
     "home": "Juventus",
     "away": "NEC Nijmegen",
     "channels": [
@@ -238,6 +225,19 @@
     "id": "2026-09-17_21:00_17",
     "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/124_20130207.webp",
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/580_201907080826.webp"
+  },
+  {
+    "date": "2026-09-17",
+    "time": "21:00",
+    "competition": "Europa League",
+    "home": "Real Sociedad",
+    "away": "Bournemouth",
+    "channels": [
+      "Movistar Plus+"
+    ],
+    "id": "2026-09-17_21:00_16",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/14_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/139_20130712.webp"
   },
   {
     "date": "2026-09-17",
@@ -336,6 +336,19 @@
   {
     "date": "2026-09-18",
     "time": "21:00",
+    "competition": "Premier League",
+    "home": "Brentford",
+    "away": "Chelsea",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-18_21:00_26",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/246_20140721.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/45_20130204.webp"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "21:00",
     "competition": "Primera Federación",
     "home": "U.D. Logroñés",
     "away": "Pontevedra",
@@ -350,17 +363,19 @@
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/606_201907310956.webp"
   },
   {
-    "date": "2026-09-18",
-    "time": "21:00",
-    "competition": "Premier League",
-    "home": "Brentford",
-    "away": "Chelsea",
+    "date": "2026-09-19",
+    "time": "12:00",
+    "competition": "Liga F",
+    "home": "FC Badalona Women",
+    "away": "Real Sociedad F.",
     "channels": [
+      "Esport 3",
+      "rtve Play",
       "DAZN"
     ],
-    "id": "2026-09-18_21:00_26",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/246_20140721.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/45_20130204.webp"
+    "id": "2026-09-19_12:00_41",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6565_202508290645.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/627_201908200807.webp"
   },
   {
     "date": "2026-09-19",
@@ -377,16 +392,43 @@
   },
   {
     "date": "2026-09-19",
-    "time": "16:00",
-    "competition": "Premier League",
-    "home": "Newcastle",
-    "away": "Hull City",
+    "time": "14:00",
+    "competition": "Liga Hypermotion",
+    "home": "Real Sociedad B",
+    "away": "Mallorca",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-19_14:00_32",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/1750_202107010728.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/13_20130125.webp"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "15:00",
+    "competition": "Serie A Italia",
+    "home": "Bologna",
+    "away": "Torino",
     "channels": [
       "DAZN"
     ],
-    "id": "2026-09-19_16:00_28",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/249_20140723.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/301_20150103.webp"
+    "id": "2026-09-19_15:00_37",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/372_201901270935.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/294_20141216.webp"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "15:00",
+    "competition": "Serie A Italia",
+    "home": "Udinese",
+    "away": "Cagliari",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_15:00_38",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/538_201903060627.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/506_20180807.webp"
   },
   {
     "date": "2026-09-19",
@@ -418,30 +460,16 @@
   },
   {
     "date": "2026-09-19",
-    "time": "18:30",
+    "time": "16:00",
     "competition": "Premier League",
-    "home": "Nottingham Forest",
-    "away": "Coventry City",
+    "home": "Newcastle",
+    "away": "Hull City",
     "channels": [
       "DAZN"
     ],
-    "id": "2026-09-19_18:30_31",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/477_201907261431.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/1761_202107070735.webp"
-  },
-  {
-    "date": "2026-09-19",
-    "time": "14:00",
-    "competition": "Liga Hypermotion",
-    "home": "Real Sociedad B",
-    "away": "Mallorca",
-    "channels": [
-      "DAZN",
-      "LaLiga TV Hypermotion"
-    ],
-    "id": "2026-09-19_14:00_32",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/1750_202107010728.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/13_20130125.webp"
+    "id": "2026-09-19_16:00_28",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/249_20140723.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/301_20150103.webp"
   },
   {
     "date": "2026-09-19",
@@ -456,6 +484,19 @@
     "id": "2026-09-19_16:15_33",
     "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/644_201912160815.webp",
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/18_20130125.webp"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "18:00",
+    "competition": "Serie A Italia",
+    "home": "Roma",
+    "away": "Inter de Milan",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_18:00_39",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/46_20130204.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/46_20130204.webp"
   },
   {
     "date": "2026-09-19",
@@ -487,57 +528,31 @@
   },
   {
     "date": "2026-09-19",
-    "time": "21:00",
-    "competition": "Liga EA Sports",
-    "home": "Sevilla",
-    "away": "Barcelona",
-    "channels": [
-      "M+ LaLiga",
-      "Movistar Plus+",
-      "Orange Fútbol 1"
-    ],
-    "id": "2026-09-19_21:00_36",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/12_20130125.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/2_20130125.webp"
-  },
-  {
-    "date": "2026-09-19",
-    "time": "15:00",
-    "competition": "Serie A Italia",
-    "home": "Bologna",
-    "away": "Torino",
+    "time": "18:30",
+    "competition": "Premier League",
+    "home": "Nottingham Forest",
+    "away": "Coventry City",
     "channels": [
       "DAZN"
     ],
-    "id": "2026-09-19_15:00_37",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/372_201901270935.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/294_20141216.webp"
+    "id": "2026-09-19_18:30_31",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/477_201907261431.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/1761_202107070735.webp"
   },
   {
     "date": "2026-09-19",
-    "time": "15:00",
-    "competition": "Serie A Italia",
-    "home": "Udinese",
-    "away": "Cagliari",
+    "time": "20:30",
+    "competition": "Liga F",
+    "home": "Real Madrid Fem.",
+    "away": "Valencia Féminas",
     "channels": [
+      "Teledeporte",
+      "rtve Play",
       "DAZN"
     ],
-    "id": "2026-09-19_15:00_38",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/538_201903060627.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/506_20180807.webp"
-  },
-  {
-    "date": "2026-09-19",
-    "time": "18:00",
-    "competition": "Serie A Italia",
-    "home": "Roma",
-    "away": "Inter de Milan",
-    "channels": [
-      "DAZN"
-    ],
-    "id": "2026-09-19_18:00_39",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/46_20130204.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/46_20130204.webp"
+    "id": "2026-09-19_20:30_42",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/675_202009170814.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/626_201908200800.webp"
   },
   {
     "date": "2026-09-19",
@@ -554,33 +569,18 @@
   },
   {
     "date": "2026-09-19",
-    "time": "12:00",
-    "competition": "Liga F",
-    "home": "FC Badalona Women",
-    "away": "Real Sociedad F.",
+    "time": "21:00",
+    "competition": "Liga EA Sports",
+    "home": "Sevilla",
+    "away": "Barcelona",
     "channels": [
-      "Esport 3",
-      "rtve Play",
-      "DAZN"
+      "M+ LaLiga",
+      "Movistar Plus+",
+      "Orange Fútbol 1"
     ],
-    "id": "2026-09-19_12:00_41",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6565_202508290645.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/627_201908200807.webp"
-  },
-  {
-    "date": "2026-09-19",
-    "time": "20:30",
-    "competition": "Liga F",
-    "home": "Real Madrid Fem.",
-    "away": "Valencia Féminas",
-    "channels": [
-      "Teledeporte",
-      "rtve Play",
-      "DAZN"
-    ],
-    "id": "2026-09-19_20:30_42",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/675_202009170814.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/626_201908200800.webp"
+    "id": "2026-09-19_21:00_36",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/12_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/2_20130125.webp"
   },
   {
     "date": "2026-09-20",
@@ -627,6 +627,37 @@
   },
   {
     "date": "2026-09-20",
+    "time": "12:30",
+    "competition": "Serie A Italia",
+    "home": "Fiorentina",
+    "away": "Nápoles",
+    "channels": [
+      "M+ Liga de Campeones",
+      "DAZN",
+      "Movistar Plus+"
+    ],
+    "id": "2026-09-20_12:30_57",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/153_20140716.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/234_20140716.webp"
+  },
+  {
+    "id": "laliga-20260920-getafe-malaga",
+    "date": "2026-09-20",
+    "time": "14:00",
+    "competition": "Liga EA Sports",
+    "home": "Getafe",
+    "away": "Málaga",
+    "channels": [
+      "DAZN"
+    ],
+    "status": "scheduled",
+    "score": "",
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "date": "2026-09-20",
     "time": "14:00",
     "competition": "Liga Hypermotion",
     "home": "Sabadell",
@@ -639,6 +670,45 @@
     "id": "2026-09-20_14:00_46",
     "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/32_20130125.webp",
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/261_20140807.webp"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "15:00",
+    "competition": "Premier League",
+    "home": "Bournemouth",
+    "away": "Liverpool",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_15:00_55",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/139_20130712.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/233_20140716.webp"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "15:00",
+    "competition": "Premier League",
+    "home": "Leeds Utd",
+    "away": "Crystal Palace",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_15:00_54",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/493_20180727.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/300_20150103.webp"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "15:00",
+    "competition": "Premier League",
+    "home": "Manchester City",
+    "away": "Sunderland",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_15:00_53",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/99_20130204.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/299_20141227.webp"
   },
   {
     "date": "2026-09-20",
@@ -670,6 +740,19 @@
   },
   {
     "date": "2026-09-20",
+    "time": "17:30",
+    "competition": "Premier League",
+    "home": "Fulham",
+    "away": "Manchester United",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_17:30_56",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/149_20130803.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/84_20130204.webp"
+  },
+  {
+    "date": "2026-09-20",
     "time": "18:15",
     "competition": "Primera Federación",
     "home": "Zamora C.F.",
@@ -683,6 +766,38 @@
     "id": "2026-09-20_18:15_49",
     "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/654_202001080817.webp",
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/89_20130125.webp"
+  },
+  {
+    "id": "laliga-20260920-deportivo-betis",
+    "date": "2026-09-20",
+    "time": "18:30",
+    "competition": "Liga EA Sports",
+    "home": "Deportivo",
+    "away": "Betis",
+    "channels": [
+      "DAZN"
+    ],
+    "status": "scheduled",
+    "score": "",
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
+  },
+  {
+    "id": "laliga-20260920-villarreal-levante",
+    "date": "2026-09-20",
+    "time": "18:30",
+    "competition": "Liga EA Sports",
+    "home": "Villarreal",
+    "away": "Levante",
+    "channels": [
+      "Movistar LALIGA"
+    ],
+    "status": "scheduled",
+    "score": "",
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
   },
   {
     "date": "2026-09-20",
@@ -733,70 +848,19 @@
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/616_201908200738.webp"
   },
   {
+    "id": "laliga-20260920-valencia-real-sociedad",
     "date": "2026-09-20",
-    "time": "15:00",
-    "competition": "Premier League",
-    "home": "Manchester City",
-    "away": "Sunderland",
+    "time": "21:00",
+    "competition": "Liga EA Sports",
+    "home": "Valencia",
+    "away": "Real Sociedad",
     "channels": [
-      "DAZN"
+      "Movistar LALIGA"
     ],
-    "id": "2026-09-20_15:00_53",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/99_20130204.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/299_20141227.webp"
-  },
-  {
-    "date": "2026-09-20",
-    "time": "15:00",
-    "competition": "Premier League",
-    "home": "Leeds Utd",
-    "away": "Crystal Palace",
-    "channels": [
-      "DAZN"
-    ],
-    "id": "2026-09-20_15:00_54",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/493_20180727.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/300_20150103.webp"
-  },
-  {
-    "date": "2026-09-20",
-    "time": "15:00",
-    "competition": "Premier League",
-    "home": "Bournemouth",
-    "away": "Liverpool",
-    "channels": [
-      "DAZN"
-    ],
-    "id": "2026-09-20_15:00_55",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/139_20130712.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/233_20140716.webp"
-  },
-  {
-    "date": "2026-09-20",
-    "time": "17:30",
-    "competition": "Premier League",
-    "home": "Fulham",
-    "away": "Manchester United",
-    "channels": [
-      "DAZN"
-    ],
-    "id": "2026-09-20_17:30_56",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/149_20130803.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/84_20130204.webp"
-  },
-  {
-    "date": "2026-09-20",
-    "time": "12:30",
-    "competition": "Serie A Italia",
-    "home": "Fiorentina",
-    "away": "Nápoles",
-    "channels": [
-      "M+ Liga de Campeones",
-      "DAZN",
-      "Movistar Plus+"
-    ],
-    "id": "2026-09-20_12:30_57",
-    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/153_20140716.webp",
-    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/234_20140716.webp"
+    "status": "scheduled",
+    "score": "",
+    "minute": "",
+    "homeLogo": "",
+    "awayLogo": ""
   }
 ]

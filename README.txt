@@ -1,20 +1,39 @@
-IPTV FÚTBOL V19 · MARCA + FÚTBOL TV
+IPTV FÚTBOL V21 · ACTUALIZACIÓN AUTOMÁTICA COMPLETA
 
-Concepto:
-- MARCA se utiliza como referencia para calendario/resultados/horarios cuando se incorpora marca_matches.json.
-- Fútbol TV se utiliza para la programación televisiva y canales.
-- La página sigue funcionando con matches.json si marca_matches.json no está disponible.
+OBJETIVO
+La página ya no depende de una lista fija de partidos. GitHub Actions reconstruye cada 30 minutos una ventana móvil de 7 días.
 
-IMPORTANTE:
-La web de MARCA bloquea la extracción automática directa en algunos entornos mediante robots.txt.
-Por eso V19 NO inventa ni raspa datos desde el navegador: deja preparado un fichero marca_matches.json opcional para que el workflow de GitHub lo genere cuando sea posible.
-Los canales continúan procediendo de la agenda de Fútbol TV.
+FUENTES
+- Calendario y partidos: ESPN Soccer API pública, por competición, para evitar que falten partidos de una jornada.
+- Televisión: Fútbol TV, que se consulta y se cruza con cada partido para obtener los canales españoles.
+- Escudos: URLs de imágenes de Fútbol TV almacenadas en matches.json/logos.json.
 
-Interfaz:
-- Azul marino + naranja.
-- Guía deportiva.
-- Filtros por competición.
-- Filtro por canal operativo.
-- Se pueden combinar competición + canal.
-- Escudos sin círculos.
-- 7 días.
+COMPETICIONES INCLUIDAS EN EL ACTUALIZADOR
+- LaLiga EA Sports
+- Premier League
+- Serie A Italia
+- Bundesliga
+- Ligue 1
+- Liga Hypermotion
+- Primera Federación
+- Liga F
+- Europa League
+- Champions League
+- Copa Libertadores
+- Coppa Italia
+
+FUNCIONAMIENTO
+1. Cada 30 minutos GitHub Actions ejecuta update_matches.py.
+2. Descarga todos los partidos de los próximos 7 días para las competiciones anteriores.
+3. Consulta Fútbol TV y cruza fecha + hora + equipos para incorporar los canales de televisión.
+4. update_logos.py reaplica los escudos.
+5. Si hay cambios, GitHub hace commit y GitHub Pages muestra los datos nuevos.
+
+IMPORTANTE
+La página web nunca inventa partidos para completar una jornada. La fuente de calendario se reconstruye completa en cada ejecución. Si Fútbol TV no está disponible temporalmente, el calendario de partidos sigue actualizándose y conserva los canales de la versión anterior cuando coinciden.
+
+FILTROS
+- 7 días
+- Competición
+- Canal de TV
+- Se pueden combinar competición + canal

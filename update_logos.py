@@ -10,7 +10,7 @@ M={
 'Alcorcón':'28_20130125.webp','Almería':'24_20130125.webp','Cartagena':'40_20131123.webp','CD Extremadura 1924':'6356_202410260837.webp','Celta B':'510_201905230621.webp','Cultural Leonesa':'260_20140807.webp','Deportivo Abanca':'630_201908200811.webp','Fulham':'149_20130803.webp','Granada Fem.':'4097_202211040649.webp','Inter de Milan':'46_20130204.webp','Leeds Utd':'493_20180727.webp','Liverpool':'233_20140716.webp','Lugo':'89_20130125.webp','Manchester City':'99_20130204.webp','Manchester United':'84_20130204.webp','Nàstic Tarragona':'194_20131123.webp','Nápoles':'234_20140716.webp','Real Oviedo':'261_20140807.webp','Real Zaragoza':'19_20130125.webp','Sabadell':'32_20130125.webp','Sevilla FC Fem.':'628_201908200809.webp','U.S. Lecce':'616_201908200738.webp','UDG Tenerife':'629_201908200810.webp','Zamora C.F.':'654_202001080817.webp'
 }
 
-p=Path('/mnt/data/work_v15/matches.json')
+p=Path(__file__).resolve().parent/'matches.json'
 data=json.loads(p.read_text(encoding='utf-8'))
 missing=[]
 for m in data:
@@ -20,4 +20,9 @@ for m in data:
         if not url: missing.append(team)
         m[side+'Logo']=BASE+url if url else ''
 p.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+logos={}
+for m in data:
+    if m.get('homeLogo'): logos[m['home']]=m['homeLogo']
+    if m.get('awayLogo'): logos[m['away']]=m['awayLogo']
+Path(__file__).resolve().parent.joinpath('logos.json').write_text(json.dumps(logos,ensure_ascii=False,indent=2),encoding='utf-8')
 print('matches',len(data),'teams',len(set(x for m in data for x in (m['home'],m['away']))),'mapped',len(M),'missing',sorted(set(missing)))
