@@ -25,6 +25,6 @@ for i,m in enumerate(marks):
         events.append({"id":f"{d}_{g.group('time')}_{home}_{away}","date":d.isoformat(),"time":g.group("time"),"competition":comp,"home":home,"away":away,"channels":ch,"status":"scheduled","score":None,"minute":"","homeLogo":"","awayLogo":""})
 uniq={x["id"]:x for x in events}
 events=sorted(uniq.values(),key=lambda x:(x["date"],x["time"],x["home"]))
-if not events: raise SystemExit("Fútbol TV no se pudo analizar; no se modifica matches.json")
+if len(events) < 15: raise SystemExit("Fútbol TV no se pudo analizar; no se modifica matches.json")
 open("matches.json","w",encoding="utf-8").write(json.dumps(events,ensure_ascii=False,indent=2))
 print("Partidos extraídos:",len(events))

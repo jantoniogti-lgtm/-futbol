@@ -31,11 +31,12 @@ main{max-width:1500px;margin:auto;padding:18px}.days{display:flex;gap:8px;overfl
 <div class="info" id="status">Cargando…</div><div id="content"></div></main>
 <script>
 let all=[],selected=today(),filter='TODOS';
+const daysEl=document.getElementById('days'), statusEl=document.getElementById('status'), contentEl=document.getElementById('content');
 function today(){let d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function add(s,n){let d=new Date(s+'T12:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function dayname(d){return d===today()?'HOY':new Date(d+'T12:00:00').toLocaleDateString('es-ES',{weekday:'short'}).toUpperCase()}
-function days(){daysEl.innerHTML=Array.from({length:7},(_,i)=>add(today(),i)).map(d=>`<button class="day ${d===selected?'active':''}" onclick="selected='${d}';days();render()"><b>${dayname(d)}</b><small>${new Date(d+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short'})}</small></button>`).join('')}
+function drawDays(){daysEl.innerHTML=Array.from({length:7},(_,i)=>add(today(),i)).map(d=>`<button class="day ${d===selected?'active':''}" onclick="selected='${d}';drawDays();render()"><b>${dayname(d)}</b><small>${new Date(d+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short'})}</small></button>`).join('')}
 function fc(f,b){filter=f;document.querySelectorAll('.btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
 function logoUrl(name){
   const n=encodeURIComponent(String(name||'').trim());
@@ -49,8 +50,7 @@ function img(u,name){
   return `<div class="crest fallback">${esc((name||'⚽').split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase())}</div>`;
 }" onerror="this.onerror=null;this.outerHTML='<div class=&quot;crest&quot;>⚽</div>'">`:'<div class="crest">⚽</div>'}
 function card(m){let state=m.status==='live'?`<span class="live">🔴 EN DIRECTO</span>`:m.status==='finished'?'🏁 FINALIZADO':'';let score=m.score?`${m.score.home} - ${m.score.away}`:'VS';return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team">${img(m.homeLogo,m.home)}${esc(m.home)}</div><div class="score">${score}</div><div class="team">${img(m.awayLogo,m.away)}${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div><div class="detail">${state}</div></article>`}
-function render(){let x=all.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));let t=selected===today()?'HOY':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});content.innerHTML=`<h2>${t}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día.</div>')}
-const daysEl=document.getElementById('days');
+function render(){let x=all.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));let t=selected===today()?'HOY':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});contentEl.innerHTML=`<h2>${t}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día.</div>')}
 async function loadData(){
   try{
     const r=await fetch('matches.json?'+Date.now());
@@ -60,8 +60,8 @@ async function loadData(){
   }catch(e){
     all=[];
   }
-  days();render();
-  status.textContent=all.length?`Agenda actualizada · ${all.length} partidos cargados.`:'No se pudo cargar la agenda.';
+  drawDays();render();
+  statusEl.textContent=all.length?`Agenda actualizada · ${all.length} partidos cargados.`:'No se pudo cargar la agenda.';
 }
 loadData();;
 </script></body></html>
