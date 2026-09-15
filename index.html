@@ -7,124 +7,153 @@
 <meta name="theme-color" content="#07131f">
 <style>
 :root{
-  --bg:#06111c; --panel:#0b1b2a; --panel2:#0e2234; --line:#1d3a52;
-  --blue:#19a7ff; --blue2:#087bd0; --green:#16c784; --text:#f5f8fb;
-  --muted:#91a6b9; --gold:#ffcc45;
+  --bg:#050b08; --panel:#0a1510; --panel2:#0e1d15; --line:#20372a;
+  --green:#39e36f; --green2:#13a94a; --lime:#b7ff4a; --gold:#ffd34d;
+  --text:#f5faf6; --muted:#91a79a; --red:#ff5b5b;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;
   background:
-    radial-gradient(circle at 10% 0%,rgba(25,167,255,.13),transparent 28%),
-    radial-gradient(circle at 90% 15%,rgba(22,199,132,.08),transparent 25%),
-    linear-gradient(180deg,#06111c 0%,#071521 45%,#050e17 100%);
+    radial-gradient(circle at 8% 0%,rgba(57,227,111,.16),transparent 30%),
+    radial-gradient(circle at 95% 10%,rgba(183,255,74,.08),transparent 25%),
+    linear-gradient(180deg,#050b08 0%,#07120c 48%,#040806 100%);
 }
 body:before{
-  content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;
   background-image:linear-gradient(90deg,#fff 1px,transparent 1px),linear-gradient(#fff 1px,transparent 1px);
-  background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 65%);
+  background-size:44px 44px;mask-image:linear-gradient(to bottom,black,transparent 70%);
 }
 header{
-  position:sticky;top:0;z-index:20;height:68px;padding:0 24px;
+  position:sticky;top:0;z-index:30;height:70px;padding:0 24px;
   display:flex;align-items:center;gap:14px;
-  background:rgba(5,16,27,.94);backdrop-filter:blur(14px);
-  border-bottom:1px solid #1a344a;
+  background:rgba(4,12,7,.95);backdrop-filter:blur(15px);
+  border-bottom:1px solid #1c3826;
 }
 .brand{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:.5px}
 .ball{
-  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
-  background:linear-gradient(145deg,#19a7ff,#075eaa);
-  box-shadow:0 6px 20px rgba(25,167,255,.25);font-size:21px
+  width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(145deg,var(--green),var(--green2));
+  box-shadow:0 7px 24px rgba(57,227,111,.22);font-size:21px
 }
-.brandText{font-size:19px}.brandText b{color:var(--blue)}
-.headerRight{margin-left:auto;display:flex;align-items:center;gap:9px;color:var(--muted);font-size:11px;font-weight:800}
-.tvPill{border:1px solid #27516d;background:#0b2234;padding:8px 11px;border-radius:999px;color:#dcecf8}
-.tvDot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#20d98c;margin-right:6px;box-shadow:0 0 9px #20d98c}
+.brandText{font-size:19px}.brandText b{color:var(--green)}
+.headerRight{margin-left:auto;display:flex;align-items:center;gap:9px;color:var(--muted);font-size:11px;font-weight:900}
+.tvPill{border:1px solid #31553d;background:#0b1c11;padding:8px 12px;border-radius:999px;color:#dcefe1}
+.tvDot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px;box-shadow:0 0 10px var(--green)}
 
 .hero{
-  position:relative;overflow:hidden;padding:34px max(18px,5vw) 30px;
-  border-bottom:1px solid #173249;
+  position:relative;overflow:hidden;padding:35px max(18px,5vw) 31px;
+  border-bottom:1px solid #193324;
   background:
-    linear-gradient(100deg,rgba(8,29,47,.97),rgba(8,29,47,.75)),
-    radial-gradient(circle at 80% 50%,rgba(25,167,255,.2),transparent 35%);
+    linear-gradient(105deg,rgba(5,24,13,.98),rgba(7,25,15,.78)),
+    radial-gradient(circle at 78% 45%,rgba(57,227,111,.18),transparent 34%);
+}
+.hero:before{
+  content:"";position:absolute;right:-70px;top:-135px;width:420px;height:420px;
+  border:2px solid rgba(57,227,111,.12);border-radius:50%;
+  box-shadow:0 0 0 36px rgba(57,227,111,.025),0 0 0 74px rgba(57,227,111,.018);
 }
 .hero:after{
-  content:"";position:absolute;right:-80px;top:-100px;width:330px;height:330px;border:2px solid rgba(255,255,255,.05);
-  border-radius:50%;box-shadow:0 0 0 35px rgba(255,255,255,.018),0 0 0 70px rgba(255,255,255,.012)
+  content:"";position:absolute;right:12%;bottom:-1px;width:160px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:.75
 }
 .heroInner{max-width:1450px;margin:auto;position:relative;z-index:1}
-.kicker{font-size:11px;font-weight:900;letter-spacing:2px;color:var(--blue);margin-bottom:7px}
-h1{margin:0;font-size:clamp(29px,4vw,48px);line-height:1;font-weight:950;letter-spacing:-1.5px}
-.sub{margin-top:10px;color:#a9bac8;font-size:14px}
+.kicker{font-size:11px;font-weight:950;letter-spacing:2px;color:var(--green);margin-bottom:8px}
+h1{margin:0;font-size:clamp(30px,4vw,50px);line-height:1;font-weight:950;letter-spacing:-1.8px}
+.sub{margin-top:10px;color:#a9bcaf;font-size:14px}
 .heroStats{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-.stat{padding:9px 13px;border:1px solid #24465e;background:rgba(7,23,37,.78);border-radius:10px;font-size:11px;font-weight:800;color:#d7e6f1}
-.stat b{color:white;font-size:14px;margin-right:4px}
+.stat{padding:9px 13px;border:1px solid #2a4934;background:rgba(7,21,12,.82);border-radius:10px;font-size:11px;font-weight:850;color:#d7e7dc}
+.stat b{color:var(--green);font-size:14px;margin-right:4px}
 
 .wrap{max-width:1450px;margin:auto;padding:18px}
 .sectionTop{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:12px}
-.sectionTitle{font-size:18px;font-weight:950;margin:0}
-.status{font-size:11px;color:var(--muted);font-weight:700}
+.sectionTitle{font-size:19px;font-weight:950;margin:0}
+.status{font-size:11px;color:var(--muted);font-weight:750}
 .days{
-  display:flex;gap:8px;overflow-x:auto;padding:2px 2px 12px;
-  scrollbar-width:thin;scrollbar-color:#284a62 transparent
+  display:flex;gap:8px;overflow-x:auto;padding:2px 2px 13px;
+  scrollbar-width:thin;scrollbar-color:#31563c transparent
 }
 .day{
-  min-width:118px;text-align:left;padding:12px 13px;color:#dce7ef;cursor:pointer;
-  border:1px solid #223e54;background:linear-gradient(180deg,#0d2030,#0b1927);
-  border-radius:13px;transition:.18s;box-shadow:0 3px 10px rgba(0,0,0,.12)
+  min-width:122px;text-align:left;padding:12px 13px;color:#dce9df;cursor:pointer;
+  border:1px solid #254432;background:linear-gradient(180deg,#0d2115,#0a1710);
+  border-radius:13px;transition:.18s
 }
-.day:hover{transform:translateY(-1px);border-color:#36739a}
-.day.active{background:linear-gradient(135deg,#19a7ff,#087bd0);border-color:#19a7ff;box-shadow:0 8px 22px rgba(25,167,255,.18)}
-.day b{display:block;font-size:12px}.day small{display:block;margin-top:4px;color:#9eb2c2;font-weight:700}
-.day.active small{color:#eaf7ff}
+.day:hover{transform:translateY(-1px);border-color:#3d7952}
+.day.active{
+  background:linear-gradient(135deg,var(--green),#19b950);border-color:var(--green);
+  color:#041009;box-shadow:0 9px 24px rgba(57,227,111,.18)
+}
+.day b{display:block;font-size:12px}.day small{display:block;margin-top:4px;color:#9eb3a4;font-weight:750}
+.day.active small{color:#12351d}
 
-.filters{display:flex;gap:7px;overflow-x:auto;padding:2px 1px 15px;scrollbar-width:thin}
+.filterPanel{
+  margin:5px 0 16px;padding:13px;border:1px solid #1e3b29;border-radius:16px;
+  background:linear-gradient(180deg,rgba(11,28,17,.96),rgba(7,18,11,.96));
+  box-shadow:0 8px 28px rgba(0,0,0,.14)
+}
+.filterHead{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.filterHead strong{font-size:12px}.filterHead span{font-size:10px;color:#789282;font-weight:750}
+.filterRow{display:flex;gap:7px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
 .btn{
-  white-space:nowrap;background:#0c1c2b;color:#cddce7;border:1px solid #203c53;
-  border-radius:999px;padding:8px 12px;cursor:pointer;font-size:11px;font-weight:850;transition:.16s
+  white-space:nowrap;background:#0d1d13;color:#cfe0d4;border:1px solid #294634;
+  border-radius:999px;padding:8px 12px;cursor:pointer;font-size:10px;font-weight:900;transition:.16s
 }
-.btn:hover{border-color:#39769b;color:#fff}
-.btn.active{background:#159fe9;border-color:#159fe9;color:white;box-shadow:0 5px 15px rgba(21,159,233,.18)}
+.btn:hover{border-color:#4c865d;color:#fff}
+.btn.active{background:#174d29;border-color:var(--green);color:#b9ffcf;box-shadow:0 0 0 1px rgba(57,227,111,.08)}
+.channelRow{margin-top:12px;padding-top:12px;border-top:1px solid #183323}
+.channelBtn{
+  white-space:nowrap;background:#111c15;color:#cfe0d4;border:1px solid #2a4132;
+  border-radius:9px;padding:8px 10px;cursor:pointer;font-size:10px;font-weight:900;transition:.16s
+}
+.channelBtn:before{content:"📺";font-size:10px;margin-right:5px}
+.channelBtn:hover{border-color:#59806a;color:#fff}
+.channelBtn.active{background:linear-gradient(135deg,#245b32,#123a20);border-color:var(--lime);color:#eaffd9;box-shadow:0 0 0 1px rgba(183,255,74,.09)}
+.channelBtn em{font-style:normal;color:#8fa696;margin-left:4px;font-size:9px}
 
-#content h2{margin:3px 0 12px;font-size:19px;text-transform:capitalize}
-.match{
-  position:relative;display:grid;grid-template-columns:74px 155px 1fr 330px;
-  align-items:center;gap:15px;margin:9px 0;padding:13px 15px;
-  background:linear-gradient(105deg,rgba(14,34,52,.97),rgba(10,25,39,.97));
-  border:1px solid #1d3c54;border-radius:15px;
-  box-shadow:0 8px 25px rgba(0,0,0,.14);overflow:hidden
+#content h2{margin:4px 0 12px;font-size:19px;text-transform:capitalize}
+.activeFilter{
+  display:inline-flex;align-items:center;gap:7px;margin:0 0 12px;
+  padding:7px 10px;border-radius:999px;background:#102719;border:1px solid #2e5b3b;
+  color:#b9f8c9;font-size:10px;font-weight:900
 }
-.match:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#159fe9;opacity:.8}
-.match:hover{border-color:#326887;transform:translateY(-1px);transition:.16s}
+.match{
+  position:relative;display:grid;grid-template-columns:78px 160px 1fr 340px;
+  align-items:center;gap:15px;margin:9px 0;padding:13px 15px;
+  background:linear-gradient(105deg,rgba(13,30,19,.98),rgba(8,19,12,.98));
+  border:1px solid #1d3c28;border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,.16);overflow:hidden
+}
+.match:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green);opacity:.82}
+.match:hover{border-color:#3b6848;transform:translateY(-1px);transition:.16s}
 .time{font-size:23px;font-weight:950;letter-spacing:-.5px;text-align:center}
-.comp{font-size:10px;color:#8fa9ba;text-transform:uppercase;letter-spacing:.55px;font-weight:900;line-height:1.3}
+.comp{font-size:10px;color:#8fa596;text-transform:uppercase;letter-spacing:.55px;font-weight:900;line-height:1.3}
 .teams{display:flex;align-items:center;justify-content:center;gap:18px;min-width:0}
 .team{text-align:center;font-weight:850;min-width:125px;font-size:14px}
 .crestBox{height:66px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
 .crest{width:61px;height:61px;object-fit:contain;display:block;background:transparent;border:0;box-shadow:none}
 .fallback{
   width:61px;height:61px;display:flex;align-items:center;justify-content:center;
-  font-size:14px;font-weight:950;color:#dceaf4;background:#102b3e;border-radius:12px;border:1px solid #244d67
+  font-size:14px;font-weight:950;color:#dcefe1;background:#10271a;border-radius:12px;border:1px solid #2b5638
 }
 .score{
   width:39px;height:39px;display:grid;place-items:center;border-radius:50%;
-  border:1px solid #2d526b;background:#071522;color:#91b3c9;font-size:11px;font-weight:950
+  border:1px solid #31543b;background:#07120b;color:#9bc2a8;font-size:11px;font-weight:950
 }
 .channels{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-start}
 .ch{
   display:inline-flex;align-items:center;gap:5px;
-  background:linear-gradient(180deg,#122b3e,#0b1c2a);
-  border:1px solid #2b4e65;border-radius:8px;padding:7px 8px;
-  font-size:10px;font-weight:900;color:#e1edf4
+  background:linear-gradient(180deg,#13281a,#0b1710);
+  border:1px solid #2d4d36;border-radius:8px;padding:7px 8px;
+  font-size:10px;font-weight:900;color:#e1eee4
 }
-.ch:before{content:"TV";font-size:7px;color:#19a7ff;border:1px solid #27617f;border-radius:3px;padding:1px 2px}
-.empty{padding:38px;text-align:center;color:#91a4b6;border:1px dashed #29465d;border-radius:15px;background:#0a1825}
+.ch:before{content:"TV";font-size:7px;color:var(--green);border:1px solid #34734a;border-radius:3px;padding:1px 2px}
+.empty{padding:38px;text-align:center;color:#91a59a;border:1px dashed #2b4a34;border-radius:15px;background:#09150e}
 .footer{
-  max-width:1450px;margin:25px auto 0;padding:20px 18px 28px;color:#718a9d;
-  font-size:10px;text-align:center;border-top:1px solid #172f43
+  max-width:1450px;margin:25px auto 0;padding:20px 18px 28px;color:#6f8878;
+  font-size:10px;text-align:center;border-top:1px solid #173021
 }
-.footer b{color:#a8bfce}.source{color:#159fe9;text-decoration:none}
+.footer b{color:#a8c1af}.source{color:var(--green);text-decoration:none}
 
 @media(max-width:980px){
   .match{grid-template-columns:68px 1fr;gap:8px 13px}
@@ -135,8 +164,7 @@ h1{margin:0;font-size:clamp(29px,4vw,48px);line-height:1;font-weight:950;letter-
   .hero{padding:28px 16px}.wrap{padding:13px}
   .match{padding:12px 10px;border-radius:13px}.time{font-size:20px}
   .teams{gap:8px}.team{min-width:95px;font-size:12px}.crestBox{height:58px}.crest,.fallback{width:53px;height:53px}
-  .score{width:34px;height:34px}
-  .channels{justify-content:center}.ch{font-size:9px;padding:6px}
+  .score{width:34px;height:34px}.channels{justify-content:center}.ch{font-size:9px;padding:6px}
 }
 </style>
 </head>
@@ -167,7 +195,14 @@ h1{margin:0;font-size:clamp(29px,4vw,48px);line-height:1;font-weight:950;letter-
     <div id="status" class="status">Cargando agenda…</div>
   </div>
   <div id="days" class="days"></div>
-  <div class="filters" id="filters"></div>
+  <div class="filterPanel">
+    <div class="filterHead"><strong>🏆 COMPETICIÓN</strong><span>Filtra por competición</span></div>
+    <div class="filterRow" id="filters"></div>
+    <div class="channelRow">
+      <div class="filterHead"><strong>📺 CANALES DE TV</strong><span>Ver solo los partidos de un canal</span></div>
+      <div class="filterRow" id="channelFilters"></div>
+    </div>
+  </div>
   <div id="content"></div>
 </main>
 
@@ -177,10 +212,12 @@ h1{margin:0;font-size:clamp(29px,4vw,48px);line-height:1;font-weight:950;letter-
   · <b>Actualización automática</b>
 </footer>
 
+
 <script>
-let data=[], logos={}, selected=today(), filter='TODOS';
+let data=[], logos={}, selected=today(), filter='TODOS', channelFilter='TODOS';
 const daysEl=document.getElementById('days'), content=document.getElementById('content');
 const status=document.getElementById('status'), heroStats=document.getElementById('heroStats');
+const channelFiltersEl=document.getElementById('channelFilters');
 
 function today(){
   const d=new Date();
@@ -194,7 +231,7 @@ function dayLabel(d){return d===today()?'HOY':new Date(d+'T12:00:00').toLocaleDa
 function drawDays(){
   daysEl.innerHTML=Array.from({length:7},(_,i)=>{
     const d=add(today(),i), count=data.filter(m=>m.date===d).length;
-    return `<button class="day ${d===selected?'active':''}" onclick="selected='${d}';drawDays();render()">
+    return `<button class="day ${d===selected?'active':''}" onclick="selected='${d}';drawDays();drawChannels();render()">
       <b>${dayLabel(d)}</b>
       <small>${new Date(d+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short'})} · ${count} partidos</small>
     </button>`
@@ -206,11 +243,33 @@ const comps=[
  ['Europa League','🌍 Europa'],['Serie A Italia','🇮🇹 Serie A'],['Bundesliga','🇩🇪 Bundesliga'],
  ['Ligue 1','🇫🇷 Ligue 1'],['Liga Hypermotion','🇪🇸 Segunda'],['Primera Federación','🇪🇸 1ª Federación'],['Liga F','♀️ Liga F']
 ];
-document.getElementById('filters').innerHTML=comps.map((x,i)=>
- `<button class="btn ${i===0?'active':''}" onclick="setFilter('${x[0]}',this)">${x[1]}</button>`).join('');
 
-function setFilter(x,b){
-  filter=x;document.querySelectorAll('.btn').forEach(y=>y.classList.remove('active'));b.classList.add('active');render()
+function drawCompetitionFilters(){
+  document.getElementById('filters').innerHTML=comps.map((x,i)=>
+    `<button class="btn ${x[0]===filter?'active':''}" onclick="setFilter('${x[0]}')">${x[1]}</button>`).join('');
+}
+
+function setFilter(x){
+  filter=x;drawCompetitionFilters();render();
+}
+
+function drawChannels(){
+  const scoped=data.filter(m=>m.date===selected);
+  const counts={};
+  scoped.forEach(m=>(m.channels||[]).forEach(c=>counts[c]=(counts[c]||0)+1));
+  const channels=Object.keys(counts).sort((a,b)=>a.localeCompare(b,'es'));
+  const allCount=scoped.length;
+  channelFiltersEl.innerHTML=
+    `<button class="channelBtn ${channelFilter==='TODOS'?'active':''}" onclick="setChannel('TODOS')">Todos <em>${allCount}</em></button>`+
+    channels.map(c=>`<button class="channelBtn ${channelFilter===c?'active':''}" onclick="setChannel(${JSON.stringify(c)})">${esc(c)} <em>${counts[c]}</em></button>`).join('');
+  if(channelFilter!=='TODOS' && !counts[channelFilter]){
+    channelFilter='TODOS';
+    drawChannels();
+  }
+}
+
+function setChannel(x){
+  channelFilter=x;drawChannels();render();
 }
 
 function logoFor(team,url){
@@ -241,16 +300,25 @@ function card(m){
   </article>`;
 }
 function render(){
-  let x=data.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));
+  let x=data.filter(m=>{
+    const compOk=filter==='TODOS'||m.competition===filter;
+    const chanOk=channelFilter==='TODOS'||(m.channels||[]).includes(channelFilter);
+    return m.date===selected && compOk && chanOk;
+  });
   let title=selected===today()?'Hoy':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
-  content.innerHTML=`<h2>${title}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día con este filtro.</div>');
+  let active='';
+  if(filter!=='TODOS') active+=`🏆 ${esc(filter)}`;
+  if(channelFilter!=='TODOS') active+=(active?' · ':'')+`📺 ${esc(channelFilter)}`;
+  content.innerHTML=`<h2>${title}</h2>`+
+    (active?`<div class="activeFilter">${active}</div>`:'')+
+    (x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día con los filtros seleccionados.</div>');
 }
 function updateStats(){
   const todayCount=data.filter(m=>m.date===today()).length;
   const channelCount=new Set(data.flatMap(m=>m.channels||[])).size;
   heroStats.innerHTML=`<div class="stat"><b>${todayCount}</b> partidos hoy</div>
     <div class="stat"><b>${data.length}</b> en 7 días</div>
-    <div class="stat"><b>${channelCount}</b> canales</div>`;
+    <div class="stat"><b>${channelCount}</b> canales TV</div>`;
 }
 async function start(){
   try{
@@ -263,8 +331,8 @@ async function start(){
     if(!Array.isArray(data))throw Error('data');
     if(lr.ok)logos=await lr.json();
     data=data.map(m=>({...m,homeLogo:logoFor(m.home,m.homeLogo),awayLogo:logoFor(m.away,m.awayLogo)}));
-    drawDays();updateStats();render();
-    status.textContent='Agenda cargada · '+data.length+' partidos';
+    drawDays();drawCompetitionFilters();drawChannels();updateStats();render();
+    status.textContent='Agenda cargada · '+data.length+' partidos · filtro por canal disponible';
   }catch(e){
     status.textContent='No se pudo cargar la agenda';
     content.innerHTML='<div class="empty">Error al cargar la agenda. Comprueba que matches.json y logos.json estén publicados.</div>';
@@ -272,5 +340,6 @@ async function start(){
 }
 start();
 </script>
+
 </body>
 </html>
