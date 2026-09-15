@@ -1,14 +1,20 @@
-IPTV FÚTBOL V18 · ESTILO DEPORTIVO NAVY + NARANJA
+IPTV FÚTBOL V19 · MARCA + FÚTBOL TV
 
-Cambios:
-- Eliminado el tono verde de V17.
-- Nuevo estilo de retransmisión deportiva: azul marino/negro + naranja.
-- Corregido el filtro por canales usando eventos JavaScript robustos, sin onclick dinámicos.
-- Los botones de canales son realmente seleccionables.
-- El canal seleccionado se combina con la competición.
-- Los canales se muestran aunque ese canal no tenga partidos en el día actual; el contador indica los partidos de ese día.
-- Al cambiar de día, el filtro sigue seleccionado si el canal existe.
-- Escudos sin círculos/fondos añadidos.
-- Responsive.
+Concepto:
+- MARCA se utiliza como referencia para calendario/resultados/horarios cuando se incorpora marca_matches.json.
+- Fútbol TV se utiliza para la programación televisiva y canales.
+- La página sigue funcionando con matches.json si marca_matches.json no está disponible.
 
-Fuente de programación: Fútbol TV.
+IMPORTANTE:
+La web de MARCA bloquea la extracción automática directa en algunos entornos mediante robots.txt.
+Por eso V19 NO inventa ni raspa datos desde el navegador: deja preparado un fichero marca_matches.json opcional para que el workflow de GitHub lo genere cuando sea posible.
+Los canales continúan procediendo de la agenda de Fútbol TV.
+
+Interfaz:
+- Azul marino + naranja.
+- Guía deportiva.
+- Filtros por competición.
+- Filtro por canal operativo.
+- Se pueden combinar competición + canal.
+- Escudos sin círculos.
+- 7 días.
