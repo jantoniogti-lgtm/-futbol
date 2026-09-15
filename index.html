@@ -216,7 +216,34 @@ function badge(team,url){
   return `<div class="crestBox"><span class="fallback">${ini}</span></div>`;
 }
 function card(m){
-  const channels=(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('');
+  const channelLabels={
+  'M+ LaLiga':'M+ LALIGA TV (1/2/3)',
+  'M+ LaLiga 2':'M+ LALIGA TV (1/2/3)',
+  'Movistar LALIGA':'M+ LALIGA TV (1/2/3)',
+  'DAZN LaLiga':'DAZN LALIGA (8/9/10)',
+  'M+ Liga de Campeones':'M+ LIGA DE CAMPEONES (29/30/31)',
+  'M+ Liga de Campeones 2':'M+ LIGA DE CAMPEONES 2 (32/33)',
+  'M+ Liga de Campeones 3':'M+ LIGA DE CAMPEONES 3 (34)',
+  'M+ Liga de Campeones 4':'M+ LIGA DE CAMPEONES 4 (35)',
+  'M+ Liga de Campeones 5':'M+ LIGA DE CAMPEONES 5 (36)',
+  'M+ Liga de Campeones 6':'M+ LIGA DE CAMPEONES 6 (37)',
+  'M+ Liga de Campeones 7':'M+ LIGA DE CAMPEONES 7 (38)',
+  'M+ Liga de Campeones 8':'M+ LIGA DE CAMPEONES 8 (39)',
+  'Eurosport 1':'EUROSPORT 1 (118/119)',
+  'EUROSPORT 1':'EUROSPORT 1 (118/119)',
+  'Eurosport 2':'EUROSPORT 2 (120/121)',
+  'EUROSPORT 2':'EUROSPORT 2 (120/121)',
+  'Teledeporte':'TELEDEPORTE (132/133)',
+  'TELEDEPORTE':'TELEDEPORTE (132/133)',
+  'Esport 3':'ESPORT 3 (124)',
+  'ESPORT 3':'ESPORT 3 (124)',
+  'DAZN 1':'DAZN 1 (125/126)',
+  'DAZN 2':'DAZN 2 (127/128)',
+  'DAZN 3':'DAZN 3 (129)',
+  'DAZN 4':'DAZN 4 (130)'
+};
+function channelLabel(c){return channelLabels[c]||c;}
+const channels=(m.channels||[]).map(c=>`<span class="ch">${esc(channelLabel(c))}</span>`).join('');
   return `<article class="match">
     <div class="time">${esc(m.time)}</div>
     <div class="comp">${esc(m.competition)}</div>
