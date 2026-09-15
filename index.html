@@ -56,6 +56,8 @@ h1{margin:0;font-size:clamp(30px,4vw,50px);line-height:1;font-weight:950;letter-
 .btn{white-space:nowrap;background:#0d1b2a;color:#cfe0eb;border:1px solid #2b4257;border-radius:999px;padding:8px 12px;cursor:pointer;font-size:10px;font-weight:900;transition:.16s}
 .btn:hover{border-color:#66839a;color:#fff}.btn.active{background:#3a1d0e;border-color:var(--orange);color:#ffd9bf;box-shadow:0 0 0 1px rgba(255,122,24,.08)}
 .channelRow{margin-top:12px;padding-top:12px;border-top:1px solid #1b3043}
+.searchRow{margin-top:12px;padding-top:12px;border-top:1px solid #1b3043;display:flex;gap:8px;align-items:center}.searchBox{position:relative;flex:1;min-width:180px}.searchBox input{width:100%;box-sizing:border-box;background:#091725;color:#eef6fb;border:1px solid #2b4257;border-radius:11px;padding:11px 40px 11px 38px;font-size:12px;font-weight:800;outline:none}.searchBox input:focus{border-color:var(--orange);box-shadow:0 0 0 2px rgba(255,122,24,.10)}.searchIcon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.8}.clearSearch{display:none;position:absolute;right:9px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#9fb1c0;font-size:17px;cursor:pointer}.searchHint{font-size:10px;color:#7890a5;font-weight:750;white-space:nowrap}@media(max-width:600px){.searchRow{display:block}.searchHint{display:block;margin-top:7px}}
+
 .channelBtn{white-space:nowrap;background:#101d2b;color:#cfe0eb;border:1px solid #2b4052;border-radius:9px;padding:8px 10px;cursor:pointer;font-size:10px;font-weight:900;transition:.16s}
 .channelBtn:before{content:"📺";font-size:10px;margin-right:5px}.channelBtn:hover{border-color:#698398;color:#fff}
 .channelBtn.active{background:linear-gradient(135deg,#5b250b,#2c180e);border-color:var(--gold);color:#fff0d1;box-shadow:0 0 0 1px rgba(255,195,77,.1)}
@@ -120,6 +122,14 @@ h1{margin:0;font-size:clamp(30px,4vw,50px);line-height:1;font-weight:950;letter-
       <div class="filterHead"><strong>📺 CANALES DE TV</strong><span>Selecciona un canal para ver solo sus partidos</span></div>
       <div class="filterRow" id="channelFilters"></div>
     </div>
+    <div class="searchRow">
+      <div class="searchBox">
+        <span class="searchIcon">🔎</span>
+        <input id="teamSearch" type="search" autocomplete="off" placeholder="Buscar equipo: Barcelona, Mónaco, Madrid…" aria-label="Buscar equipo">
+        <button id="clearSearch" class="clearSearch" type="button" aria-label="Borrar búsqueda">×</button>
+      </div>
+      <span class="searchHint">Busca por nombre de cualquier equipo en los 7 días</span>
+    </div>
   </div>
   <div id="content"></div>
 </main>
@@ -132,10 +142,12 @@ h1{margin:0;font-size:clamp(30px,4vw,50px);line-height:1;font-weight:950;letter-
 
 
 <script>
-let data=[], logos={}, selected=today(), filter='TODOS', channelFilter='TODOS';
+let data=[], logos={}, selected=today(), filter='TODOS', channelFilter='TODOS', teamSearch='';
 const daysEl=document.getElementById('days'), content=document.getElementById('content');
 const status=document.getElementById('status'), heroStats=document.getElementById('heroStats');
 const channelFiltersEl=document.getElementById('channelFilters');
+const teamSearchEl=document.getElementById('teamSearch');
+const clearSearchEl=document.getElementById('clearSearch');
 
 function today(){
   const d=new Date();
@@ -201,6 +213,16 @@ channelFiltersEl.addEventListener('click', function(ev){
   setChannel(button.dataset.channel);
 });
 
+function normalizeText(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
+teamSearchEl.addEventListener('input',function(){
+  teamSearch=this.value.trim();
+  clearSearchEl.style.display=teamSearch?'block':'none';
+  render();
+});
+clearSearchEl.addEventListener('click',function(){
+  teamSearch=''; teamSearchEl.value=''; clearSearchEl.style.display='none'; render(); teamSearchEl.focus();
+});
+
 function logoFor(team,url){
   return url || logos[team] || logos[String(team).trim()] || ''
 }
@@ -256,19 +278,30 @@ const channels=(m.channels||[]).map(c=>`<span class="ch">${esc(channelLabel(c))}
   </article>`;
 }
 function render(){
+  const q=normalizeText(teamSearch);
   let x=data.filter(m=>{
     const compOk=filter==='TODOS'||m.competition===filter;
     const chanOk=channelFilter==='TODOS'||(m.channels||[]).includes(channelFilter);
-    return m.date===selected && compOk && chanOk;
+    const teamOk=!q || normalizeText(m.home).includes(q) || normalizeText(m.away).includes(q);
+    // Sin búsqueda se respeta el día seleccionado. Con búsqueda, se muestran coincidencias de los 7 días.
+    const dayOk=q || m.date===selected;
+    return dayOk && compOk && chanOk && teamOk;
   });
-  let title=selected===today()?'Hoy':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+  let title;
+  if(q){
+    title='Resultados para “'+esc(teamSearch)+'”';
+  }else{
+    title=selected===today()?'Hoy':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
+  }
   let active='';
-  if(filter!=='TODOS') active+=`🏆 ${esc(filter)}`;
+  if(q) active+=`🔎 ${esc(teamSearch)} · ${x.length} partidos encontrados`;
+  if(filter!=='TODOS') active+=(active?' · ':'')+`🏆 ${esc(filter)}`;
   if(channelFilter!=='TODOS') active+=(active?' · ':'')+`📺 ${esc(channelFilter)}`;
   content.innerHTML=`<h2>${title}</h2>`+
     (active?`<div class="activeFilter">${active}</div>`:'')+
-    (x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día con los filtros seleccionados.</div>');
+    (x.length?x.map(card).join(''):'<div class="empty">No hay partidos que coincidan con la búsqueda y los filtros seleccionados.</div>');
 }
+
 function updateStats(){
   const todayCount=data.filter(m=>m.date===today()).length;
   const channelCount=new Set(data.flatMap(m=>m.channels||[])).size;
