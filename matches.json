@@ -393,6 +393,23 @@
   {
     "date": "2026-09-19",
     "time": "14:00",
+    "competition": "Liga EA Sports",
+    "home": "Osasuna",
+    "away": "Rayo Vallecano",
+    "channels": [
+      "DAZN en abierto",
+      "Movistar LALIGA"
+    ],
+    "id": "2026-09-19_14:00_62",
+    "status": "scheduled",
+    "score": "",
+    "minute": "",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/6_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/11_20130125.webp"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "14:00",
     "competition": "Liga Hypermotion",
     "home": "Real Sociedad B",
     "away": "Mallorca",
@@ -474,6 +491,22 @@
   {
     "date": "2026-09-19",
     "time": "16:15",
+    "competition": "Liga EA Sports",
+    "home": "Athletic Club",
+    "away": "Alavés",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_16:15_63",
+    "status": "scheduled",
+    "score": "",
+    "minute": "",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/10_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/119_20130803.webp"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "16:15",
     "competition": "Liga Hypermotion",
     "home": "F.C. Andorra",
     "away": "Sporting de Gijón",
@@ -497,6 +530,22 @@
     "id": "2026-09-19_18:00_39",
     "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/46_20130204.webp",
     "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/46_20130204.webp"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "18:30",
+    "competition": "Liga EA Sports",
+    "home": "Celta",
+    "away": "Racing de Santander",
+    "channels": [
+      "Movistar LALIGA"
+    ],
+    "id": "2026-09-19_18:30_64",
+    "status": "scheduled",
+    "score": "",
+    "minute": "",
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/22_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/20_20130125.webp"
   },
   {
     "date": "2026-09-19",
@@ -653,8 +702,8 @@
     "status": "scheduled",
     "score": "",
     "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/9_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/4_20130125.webp"
   },
   {
     "date": "2026-09-20",
@@ -780,8 +829,8 @@
     "status": "scheduled",
     "score": "",
     "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/21_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/15_20130125.webp"
   },
   {
     "id": "laliga-20260920-villarreal-levante",
@@ -796,8 +845,8 @@
     "status": "scheduled",
     "score": "",
     "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/17_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/5_20130125.webp"
   },
   {
     "date": "2026-09-20",
@@ -860,7 +909,7 @@
     "status": "scheduled",
     "score": "",
     "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "homeLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/3_20130125.webp",
+    "awayLogo": "https://sportstv-img.b-cdn.net/pics/mini/teams/14_20130125.webp"
   }
 ]

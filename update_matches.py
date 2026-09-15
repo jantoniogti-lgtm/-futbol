@@ -70,21 +70,18 @@ def ftv_matches():
         print('FTV fail',e); return []
     soup=BeautifulSoup(html,'html.parser')
     today=dt.date.today(); current_year=today.year; current_date=None; out=[]; seen=set()
-    # Search time nodes and climb to the smallest ancestor containing two team links.
-    for node in soup.find_all(string=re.compile(r'^\s*\d{1,2}:\d{2}\s*$')):
-        time=norm(node)
-        if not re.fullmatch(r'\d{1,2}:\d{2}',time): continue
-        # Find latest preceding date heading.
-        cur=node.parent
-        for _ in range(20):
-            if not cur: break
-            txt=norm(cur.get_text(' ',strip=True))
-            dd=parse_date(txt,current_year)
-            if dd: current_date=dd; break
-            cur=cur.parent
-        # Look at ancestors for a card with exactly 2+ team links.
-        anc=node.parent; card=None
-        for _ in range(8):
+    # Walk the document in order so a date heading applies to all following cards
+    # until the next heading. This is much safer than searching upward from a time node.
+    for el in soup.find_all(['h1','h2','h3','h4','h5','h6','time','div','p','span','a']):
+        txt=norm(el.get_text(' ',strip=True))
+        dd=parse_date(txt,current_year)
+        if dd and (len(txt) < 90 or 'de ' in txt.lower()):
+            current_date=dd
+        if not re.fullmatch(r'\d{1,2}:\d{2}',txt):
+            continue
+        time=txt
+        anc=el; card=None; teams=[]
+        for _ in range(10):
             if not anc: break
             teams=[]
             for a in anc.find_all('a',href=True):
@@ -106,7 +103,6 @@ def ftv_matches():
                 comp=norm(a.get_text(' ',strip=True)); break
         if not comp:
             text=norm(card.get_text(' ',strip=True))
-            # Best-effort competition labels from known names.
             for c in set(LEAGUES.values())|{'Liga EA Sports','Liga Hypermotion','Primera Federación','Liga F'}:
                 if c.lower() in text.lower(): comp=c; break
         key=(current_date.isoformat(),time,teams[0],teams[1])
@@ -114,12 +110,6 @@ def ftv_matches():
         seen.add(key)
         out.append({'date':current_date.isoformat(),'time':time,'home':teams[0],'away':teams[1], 'competition':comp,'channels':channels})
     return out
-
-def aliases(name):
-    s=norm(name).lower()
-    repl={'cf ':'',' cf':'','rc ':'','rcd ':'','real ':'','club ':'','deportivo de la coruña':'deportivo','deportivo la coruna':'deportivo','málaga cf':'málaga','malaga cf':'malaga','athletic club':'athletic','r. racing club':'racing de santander','racing club':'racing de santander','r. sociedad':'real sociedad','real sociedad san sebastian':'real sociedad','atletico madrid':'atlético de madrid','atlético madrid':'atlético de madrid','villarreal cf':'villarreal','getafe cf':'getafe','valencia cf':'valencia','levante ud':'levante','real betis seville':'betis'}
-    for a,b in repl.items(): s=s.replace(a,b)
-    return re.sub(r'[^a-z0-9áéíóúüñ ]','',s).strip()
 
 def merge(espn,ftv):
     fmap={(x['date'],x['time'],aliases(x['home']),aliases(x['away'])):x for x in ftv}
@@ -147,7 +137,7 @@ def merge(espn,ftv):
 
 def main():
     start=dt.date.today(); end=start+dt.timedelta(days=6)
-    e=espn_matches(start,end); print('ESPN fixtures',len(e))
+    e=espn_matches(start,end); e=ensure_laliga_fallback(e); print('ESPN fixtures + LaLiga fallback',len(e))
     f=ftv_matches(); print('FTV listings',len(f))
     data=merge(e,f); print('Merged fixtures',len(data))
     OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
