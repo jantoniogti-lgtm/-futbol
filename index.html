@@ -10,7 +10,7 @@ header{position:sticky;top:0;z-index:5;background:#081520;border-bottom:1px soli
 main{max-width:1500px;margin:auto;padding:18px}.days{display:flex;gap:8px;overflow:auto;padding-bottom:5px}.day{min-width:125px;padding:11px 8px;background:#101e2c;border:1px solid #294057;color:#fff;border-radius:12px;cursor:pointer}.day.active{background:#159cff;border-color:#159cff}.day b{display:block}.day small{color:#b4c1ce}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.btn{background:#101e2c;border:1px solid #294057;color:#e1e8ef;border-radius:9px;padding:10px 13px;cursor:pointer}.btn.active{background:#159cff;border-color:#159cff}
 .info{font-size:12px;color:#8fa3b6;margin:8px 0 14px}.match{display:grid;grid-template-columns:68px 150px 1fr 330px 50px;gap:12px;align-items:center;background:#101e2c;border:1px solid #243b52;border-radius:14px;padding:12px;margin:8px 0}
-.time{font-size:20px;font-weight:900}.comp{font-size:11px;color:#a7b6c5;font-weight:800}.teams{display:flex;align-items:center;justify-content:center;gap:18px}.team{text-align:center;font-weight:700;min-width:120px}.crest{width:48px;height:48px;object-fit:contain;margin:auto auto 5px;display:block;border-radius:8px;background:#1b2e41}.score{font-size:19px;font-weight:900}.channels{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}.ch{font-size:10px;font-weight:800;background:#07111c;border:1px solid #30475d;border-radius:7px;padding:6px}.detail{text-align:center}.live{color:#ff5c69;font-weight:900}.empty{padding:30px;text-align:center;color:#91a5b8;background:#0c1825;border:1px dashed #2a4057;border-radius:14px}
+.time{font-size:20px;font-weight:900}.comp{font-size:11px;color:#a7b6c5;font-weight:800}.teams{display:flex;align-items:center;justify-content:center;gap:18px}.team{text-align:center;font-weight:700;min-width:120px}.crest{width:48px;height:48px;object-fit:contain;margin:auto auto 5px;display:block;border-radius:8px;background:#1b2e41}.score{font-size:19px;font-weight:900}.channels{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}.ch{font-size:10px;font-weight:800;background:#07111c;border:1px solid #30475d;border-radius:7px;padding:6px}.detail{text-align:center;font-size:11px}.detail:empty{display:none}.live{color:#ff5c69;font-weight:900}.empty{padding:30px;text-align:center;color:#91a5b8;background:#0c1825;border:1px dashed #2a4057;border-radius:14px}
 @media(max-width:900px){.match{grid-template-columns:60px 1fr 45px}.comp{grid-column:2}.teams,.channels{grid-column:1/3}.teams{grid-row:2}.channels{justify-content:flex-start}.detail{grid-column:3;grid-row:1/4}.team{min-width:90px}}
 @media(max-width:550px){h1{font-size:28px}.match{padding:10px}.team{font-size:12px}.crest{width:42px;height:42px}}
 </style></head>
@@ -37,9 +37,31 @@ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&l
 function dayname(d){return d===today()?'HOY':new Date(d+'T12:00:00').toLocaleDateString('es-ES',{weekday:'short'}).toUpperCase()}
 function days(){daysEl.innerHTML=Array.from({length:7},(_,i)=>add(today(),i)).map(d=>`<button class="day ${d===selected?'active':''}" onclick="selected='${d}';days();render()"><b>${dayname(d)}</b><small>${new Date(d+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short'})}</small></button>`).join('')}
 function fc(f,b){filter=f;document.querySelectorAll('.btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
-function img(u){return u?`<img class="crest" src="${esc(u)}" onerror="this.onerror=null;this.outerHTML='<div class=&quot;crest&quot;>⚽</div>'">`:'<div class="crest">⚽</div>'}
-function card(m){let state=m.status==='live'?`<span class="live">🔴 ${esc(m.minute||'EN DIRECTO')}</span>`:m.status==='finished'?'🏁 FINALIZADO':'⏰ PRÓXIMO';let score=m.score?`${m.score.home} - ${m.score.away}`:'VS';return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team">${img(m.homeLogo)}${esc(m.home)}</div><div class="score">${score}</div><div class="team">${img(m.awayLogo)}${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div><div class="detail">${state}</div></article>`}
+function logoUrl(name){
+  const n=encodeURIComponent(String(name||'').trim());
+  return [
+    `https://www.google.com/s2/favicons?domain=www.${n.toLowerCase().replace(/%20/g,'')}.com&sz=128`,
+    `https://ui-avatars.com/api/?name=${n}&background=182a3d&color=fff&size=96&bold=true`
+  ];
+}
+function img(u,name){
+  if(u) return `<img class="crest" src="${esc(u)}" alt="${esc(name)}" loading="lazy" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=182a3d&color=fff&size=96&bold=true'">`;
+  return `<div class="crest fallback">${esc((name||'⚽').split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase())}</div>`;
+}" onerror="this.onerror=null;this.outerHTML='<div class=&quot;crest&quot;>⚽</div>'">`:'<div class="crest">⚽</div>'}
+function card(m){let state=m.status==='live'?`<span class="live">🔴 EN DIRECTO</span>`:m.status==='finished'?'🏁 FINALIZADO':'';let score=m.score?`${m.score.home} - ${m.score.away}`:'VS';return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team">${img(m.homeLogo,m.home)}${esc(m.home)}</div><div class="score">${score}</div><div class="team">${img(m.awayLogo,m.away)}${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div><div class="detail">${state}</div></article>`}
 function render(){let x=all.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));let t=selected===today()?'HOY':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});content.innerHTML=`<h2>${t}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día.</div>')}
 const daysEl=document.getElementById('days');
-fetch('matches.json?'+Date.now()).then(r=>r.json()).then(j=>{all=j;days();render();status.textContent='Agenda actualizada automáticamente desde Fútbol TV.'}).catch(()=>status.textContent='No se pudo cargar matches.json.');
+async function loadData(){
+  try{
+    const r=await fetch('matches.json?'+Date.now());
+    const j=await r.json();
+    all=Array.isArray(j)?j:[];
+    if(!all.length) throw new Error('empty');
+  }catch(e){
+    all=[];
+  }
+  days();render();
+  status.textContent=all.length?`Agenda actualizada · ${all.length} partidos cargados.`:'No se pudo cargar la agenda.';
+}
+loadData();;
 </script></body></html>

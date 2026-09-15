@@ -15,3 +15,5 @@ GitHub > Actions > Actualizar partidos de Fútbol TV > Run workflow
 
 La web no usa tu M3U/EPG privado.
 Fuente: https://www.futboltv.info/
+
+V13: se han eliminado los textos 'PRÓXIMO' y el reloj; los escudos tienen fallback visual para que nunca quede un hueco vacío. El parser no publica una actualización si extrae menos de 15 partidos.
