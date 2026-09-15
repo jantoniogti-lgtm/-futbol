@@ -1,22 +1,14 @@
-IPTV FÚTBOL V17 · ESTILO DEPORTIVO VERDE + FILTRO POR CANALES
+IPTV FÚTBOL V18 · ESTILO DEPORTIVO NAVY + NARANJA
 
-Cambios principales:
-- Nuevo diseño deportivo inspirado en campo de fútbol/televisión.
-- Nueva paleta verde césped + negro.
-- Filtros por competición.
-- NUEVO: filtro por canal de TV.
-- Puedes seleccionar, por ejemplo, DAZN y ver únicamente los partidos de ese canal.
-- El filtro de canal se recalcula al cambiar de día.
-- Muestra el número de partidos disponibles en cada canal.
-- Puedes combinar competición + canal.
-- Escudos sin círculos ni fondos añadidos.
-- Responsive PC/móvil/tablet.
-- Mantiene matches.json, logos.json y actualización de GitHub.
-
-Ejemplo:
-1. Pulsa un día.
-2. En "CANALES DE TV" pulsa DAZN.
-3. La página mostrará solo los partidos de ese día que emite DAZN.
-4. Puedes añadir un filtro de competición, por ejemplo LaLiga.
+Cambios:
+- Eliminado el tono verde de V17.
+- Nuevo estilo de retransmisión deportiva: azul marino/negro + naranja.
+- Corregido el filtro por canales usando eventos JavaScript robustos, sin onclick dinámicos.
+- Los botones de canales son realmente seleccionables.
+- El canal seleccionado se combina con la competición.
+- Los canales se muestran aunque ese canal no tenga partidos en el día actual; el contador indica los partidos de ese día.
+- Al cambiar de día, el filtro sigue seleccionado si el canal existe.
+- Escudos sin círculos/fondos añadidos.
+- Responsive.
 
 Fuente de programación: Fútbol TV.
