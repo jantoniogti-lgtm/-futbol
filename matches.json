@@ -1,41 +1,40 @@
 [
   {
-    "id": "2026-09-14_21:00_Villarreal_Betis",
-    "date": "2026-09-14",
-    "time": "21:00",
+    "date": "2026-09-15",
+    "time": "19:00",
     "competition": "Liga EA Sports",
-    "home": "Villarreal",
-    "away": "Betis",
+    "home": "Rayo Vallecano",
+    "away": "Espanyol",
     "channels": [
       "M+ LaLiga",
-      "Movistar Plus+",
-      "Orange Fútbol 1"
+      "M+ LaLiga 2"
     ],
-    "status": "scheduled",
-    "score": null,
-    "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "id": "2026-09-15_19:00_0"
   },
   {
-    "id": "2026-09-14_21:00_Leeds_Newcastle",
-    "date": "2026-09-14",
-    "time": "21:00",
-    "competition": "Premier League",
-    "home": "Leeds Utd",
-    "away": "Newcastle",
+    "date": "2026-09-15",
+    "time": "20:00",
+    "competition": "Liga EA Sports",
+    "home": "Alavés",
+    "away": "Valencia",
     "channels": [
-      "DAZN",
-      "DAZN 1"
+      "DAZN LaLiga",
+      "DAZN"
     ],
-    "status": "scheduled",
-    "score": null,
-    "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "id": "2026-09-15_20:00_1"
   },
   {
-    "id": "2026-09-15_21:30_Elche_RealMadrid",
+    "date": "2026-09-15",
+    "time": "21:00",
+    "competition": "Coppa Italia",
+    "home": "Fiorentina",
+    "away": "Pisa S.C.",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-15_21:00_2"
+  },
+  {
     "date": "2026-09-15",
     "time": "21:30",
     "competition": "Liga EA Sports",
@@ -46,14 +45,85 @@
       "Movistar Plus+",
       "Orange Fútbol 1"
     ],
-    "status": "scheduled",
-    "score": null,
-    "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "id": "2026-09-15_21:30_3"
   },
   {
-    "id": "2026-09-16_21:30_Barcelona_Racing",
+    "date": "2026-09-16",
+    "time": "18:45",
+    "competition": "Europa League",
+    "home": "AC Omonia",
+    "away": "Celta",
+    "channels": [],
+    "id": "2026-09-16_18:45_4"
+  },
+  {
+    "date": "2026-09-16",
+    "time": "18:45",
+    "competition": "Europa League",
+    "home": "Ararat-Armenia",
+    "away": "Sparta Praga",
+    "channels": [
+      "M+ Liga de Campeones 2"
+    ],
+    "id": "2026-09-16_18:45_5"
+  },
+  {
+    "date": "2026-09-16",
+    "time": "19:00",
+    "competition": "Liga EA Sports",
+    "home": "Deportivo",
+    "away": "Sevilla",
+    "channels": [
+      "DAZN LaLiga",
+      "DAZN"
+    ],
+    "id": "2026-09-16_19:00_6"
+  },
+  {
+    "date": "2026-09-16",
+    "time": "19:00",
+    "competition": "Liga EA Sports",
+    "home": "Atlético de Madrid",
+    "away": "Osasuna",
+    "channels": [
+      "M+ LaLiga"
+    ],
+    "id": "2026-09-16_19:00_7"
+  },
+  {
+    "date": "2026-09-16",
+    "time": "21:00",
+    "competition": "Europa League",
+    "home": "Olympiacos",
+    "away": "Jagiellonia Bialystok",
+    "channels": [
+      "M+ Liga de Campeones 3"
+    ],
+    "id": "2026-09-16_21:00_8"
+  },
+  {
+    "date": "2026-09-16",
+    "time": "21:00",
+    "competition": "Europa League",
+    "home": "Bayer Leverkusen",
+    "away": "NK Celje",
+    "channels": [
+      "M+ Liga de Campeones 2"
+    ],
+    "id": "2026-09-16_21:00_9"
+  },
+  {
+    "date": "2026-09-16",
+    "time": "21:30",
+    "competition": "Liga EA Sports",
+    "home": "Levante",
+    "away": "Athletic Club",
+    "channels": [
+      "M+ LaLiga"
+    ],
+    "id": "2026-09-16_21:30_10"
+  },
+  {
     "date": "2026-09-16",
     "time": "21:30",
     "competition": "Liga EA Sports",
@@ -63,14 +133,55 @@
       "DAZN LaLiga",
       "DAZN"
     ],
-    "status": "scheduled",
-    "score": null,
-    "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "id": "2026-09-16_21:30_11"
   },
   {
-    "id": "2026-09-17_21:00_RealSociedad_Bournemouth",
+    "date": "2026-09-17",
+    "time": "00:00",
+    "competition": "Copa Libertadores",
+    "home": "LDU Quito",
+    "away": "Palmeiras",
+    "channels": [
+      "M+ Liga de Campeones 2",
+      "M+ Vamos"
+    ],
+    "id": "2026-09-17_00:00_12"
+  },
+  {
+    "date": "2026-09-17",
+    "time": "18:45",
+    "competition": "Europa League",
+    "home": "OFI Creta",
+    "away": "Hoffenheim",
+    "channels": [
+      "M+ Liga de Campeones 3"
+    ],
+    "id": "2026-09-17_18:45_13"
+  },
+  {
+    "date": "2026-09-17",
+    "time": "18:45",
+    "competition": "Europa League",
+    "home": "Levski Sofia",
+    "away": "Red Bull Salzburg",
+    "channels": [
+      "M+ Liga de Campeones 2"
+    ],
+    "id": "2026-09-17_18:45_14"
+  },
+  {
+    "date": "2026-09-17",
+    "time": "19:00",
+    "competition": "Liga EA Sports",
+    "home": "Betis",
+    "away": "Getafe",
+    "channels": [
+      "DAZN LaLiga",
+      "DAZN"
+    ],
+    "id": "2026-09-17_19:00_15"
+  },
+  {
     "date": "2026-09-17",
     "time": "21:00",
     "competition": "Europa League",
@@ -79,14 +190,230 @@
     "channels": [
       "Movistar Plus+"
     ],
-    "status": "scheduled",
-    "score": null,
-    "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "id": "2026-09-17_21:00_16"
   },
   {
-    "id": "2026-09-19_21:00_Sevilla_Barcelona",
+    "date": "2026-09-17",
+    "time": "21:00",
+    "competition": "Europa League",
+    "home": "Juventus",
+    "away": "NEC Nijmegen",
+    "channels": [
+      "M+ Liga de Campeones 2"
+    ],
+    "id": "2026-09-17_21:00_17"
+  },
+  {
+    "date": "2026-09-17",
+    "time": "21:30",
+    "competition": "Liga EA Sports",
+    "home": "Málaga",
+    "away": "Villarreal",
+    "channels": [
+      "DAZN LaLiga",
+      "DAZN"
+    ],
+    "id": "2026-09-17_21:30_18"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "20:00",
+    "competition": "Liga F",
+    "home": "Alavés Fem.",
+    "away": "Barcelona Femenino",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-18_20:00_19"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "20:30",
+    "competition": "Bundesliga",
+    "home": "FC Bayern",
+    "away": "Union Berlin",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-18_20:30_20"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "20:30",
+    "competition": "Liga Hypermotion",
+    "home": "Albacete",
+    "away": "Córdoba",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-18_20:30_21"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "20:45",
+    "competition": "Ligue 1",
+    "home": "Mónaco",
+    "away": "Lens",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-18_20:45_22"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "20:45",
+    "competition": "Serie A Italia",
+    "home": "A.C. Monza",
+    "away": "Sassuolo",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-18_20:45_23"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "21:00",
+    "competition": "Liga EA Sports",
+    "home": "Espanyol",
+    "away": "Elche",
+    "channels": [
+      "DAZN LaLiga",
+      "DAZN"
+    ],
+    "id": "2026-09-18_21:00_24"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "21:00",
+    "competition": "Primera Federación",
+    "home": "U.D. Logroñés",
+    "away": "Pontevedra",
+    "channels": [
+      "DAZN",
+      "FanPlay TV",
+      "FootballClub TV",
+      "Primera Federación"
+    ],
+    "id": "2026-09-18_21:00_25"
+  },
+  {
+    "date": "2026-09-18",
+    "time": "21:00",
+    "competition": "Premier League",
+    "home": "Brentford",
+    "away": "Chelsea",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-18_21:00_26"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "13:30",
+    "competition": "Premier League",
+    "home": "Tottenham",
+    "away": "Aston Villa",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_13:30_27"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "16:00",
+    "competition": "Premier League",
+    "home": "Newcastle",
+    "away": "Hull City",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_16:00_28"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "16:00",
+    "competition": "Premier League",
+    "home": "Brighton",
+    "away": "Arsenal",
+    "channels": [
+      "M+ Liga de Campeones",
+      "DAZN",
+      "Movistar Plus+"
+    ],
+    "id": "2026-09-19_16:00_29"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "16:00",
+    "competition": "Premier League",
+    "home": "Everton",
+    "away": "Ipswich Town",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_16:00_30"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "18:30",
+    "competition": "Premier League",
+    "home": "Nottingham Forest",
+    "away": "Coventry City",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_18:30_31"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "14:00",
+    "competition": "Liga Hypermotion",
+    "home": "Real Sociedad B",
+    "away": "Mallorca",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-19_14:00_32"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "16:15",
+    "competition": "Liga Hypermotion",
+    "home": "F.C. Andorra",
+    "away": "Sporting de Gijón",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-19_16:15_33"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "18:30",
+    "competition": "Liga Hypermotion",
+    "home": "C.D. Castellón",
+    "away": "Tenerife",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-19_18:30_34"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "18:30",
+    "competition": "Liga Hypermotion",
+    "home": "C.D. Eldense",
+    "away": "Eibar",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-19_18:30_35"
+  },
+  {
     "date": "2026-09-19",
     "time": "21:00",
     "competition": "Liga EA Sports",
@@ -97,14 +424,141 @@
       "Movistar Plus+",
       "Orange Fútbol 1"
     ],
-    "status": "scheduled",
-    "score": null,
-    "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "id": "2026-09-19_21:00_36"
   },
   {
-    "id": "2026-09-20_16:15_Atletico_RealMadrid",
+    "date": "2026-09-19",
+    "time": "15:00",
+    "competition": "Serie A Italia",
+    "home": "Bologna",
+    "away": "Torino",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_15:00_37"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "15:00",
+    "competition": "Serie A Italia",
+    "home": "Udinese",
+    "away": "Cagliari",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_15:00_38"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "18:00",
+    "competition": "Serie A Italia",
+    "home": "Roma",
+    "away": "Inter de Milan",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_18:00_39"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "20:45",
+    "competition": "Serie A Italia",
+    "home": "Venezia F.C.",
+    "away": "Lazio",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-19_20:45_40"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "12:00",
+    "competition": "Liga F",
+    "home": "FC Badalona Women",
+    "away": "Real Sociedad F.",
+    "channels": [
+      "Esport 3",
+      "rtve Play",
+      "DAZN"
+    ],
+    "id": "2026-09-19_12:00_41"
+  },
+  {
+    "date": "2026-09-19",
+    "time": "20:30",
+    "competition": "Liga F",
+    "home": "Real Madrid Fem.",
+    "away": "Valencia Féminas",
+    "channels": [
+      "Teledeporte",
+      "rtve Play",
+      "DAZN"
+    ],
+    "id": "2026-09-19_20:30_42"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "12:00",
+    "competition": "Liga F",
+    "home": "Granada Fem.",
+    "away": "Deportivo Abanca",
+    "channels": [
+      "rtve Play",
+      "DAZN"
+    ],
+    "id": "2026-09-20_12:00_43"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "12:00",
+    "competition": "Liga F",
+    "home": "UDG Tenerife",
+    "away": "Sevilla FC Fem.",
+    "channels": [
+      "Teledeporte",
+      "rtve Play",
+      "DAZN"
+    ],
+    "id": "2026-09-20_12:00_44"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "12:00",
+    "competition": "Liga Hypermotion",
+    "home": "Alcorcón",
+    "away": "Nàstic Tarragona",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-20_12:00_45"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "14:00",
+    "competition": "Liga Hypermotion",
+    "home": "Sabadell",
+    "away": "Real Oviedo",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion",
+      "Orange Fútbol 2"
+    ],
+    "id": "2026-09-20_14:00_46"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "16:00",
+    "competition": "Liga Hypermotion",
+    "home": "CD Extremadura 1924",
+    "away": "Cultural Leonesa",
+    "channels": [
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-20_16:00_47"
+  },
+  {
     "date": "2026-09-20",
     "time": "16:15",
     "competition": "Liga EA Sports",
@@ -114,10 +568,119 @@
       "DAZN LaLiga",
       "DAZN"
     ],
-    "status": "scheduled",
-    "score": null,
-    "minute": "",
-    "homeLogo": "",
-    "awayLogo": ""
+    "id": "2026-09-20_16:15_48"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "18:15",
+    "competition": "Primera Federación",
+    "home": "Zamora C.F.",
+    "away": "Lugo",
+    "channels": [
+      "DAZN",
+      "FanPlay TV",
+      "FootballClub TV",
+      "Primera Federación"
+    ],
+    "id": "2026-09-20_18:15_49"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "18:30",
+    "competition": "Liga Hypermotion",
+    "home": "Almería",
+    "away": "Celta B",
+    "channels": [
+      "Gol Play",
+      "TVG 2",
+      "DAZN",
+      "LaLiga TV Hypermotion"
+    ],
+    "id": "2026-09-20_18:30_50"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "20:30",
+    "competition": "Primera Federación",
+    "home": "Real Zaragoza",
+    "away": "Cartagena",
+    "channels": [
+      "Aragón TV",
+      "La 7 Murcia",
+      "Aragón Deporte",
+      "DAZN",
+      "FanPlay TV",
+      "FootballClub TV",
+      "Primera Federación"
+    ],
+    "id": "2026-09-20_20:30_51"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "20:45",
+    "competition": "Serie A Italia",
+    "home": "A.C. Milan",
+    "away": "U.S. Lecce",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_20:45_52"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "15:00",
+    "competition": "Premier League",
+    "home": "Manchester City",
+    "away": "Sunderland",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_15:00_53"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "15:00",
+    "competition": "Premier League",
+    "home": "Leeds Utd",
+    "away": "Crystal Palace",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_15:00_54"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "15:00",
+    "competition": "Premier League",
+    "home": "Bournemouth",
+    "away": "Liverpool",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_15:00_55"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "17:30",
+    "competition": "Premier League",
+    "home": "Fulham",
+    "away": "Manchester United",
+    "channels": [
+      "DAZN"
+    ],
+    "id": "2026-09-20_17:30_56"
+  },
+  {
+    "date": "2026-09-20",
+    "time": "12:30",
+    "competition": "Serie A Italia",
+    "home": "Fiorentina",
+    "away": "Nápoles",
+    "channels": [
+      "M+ Liga de Campeones",
+      "DAZN",
+      "Movistar Plus+"
+    ],
+    "id": "2026-09-20_12:30_57"
   }
 ]

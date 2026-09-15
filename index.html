@@ -1,67 +1,21 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>IPTV Fútbol — Agenda TV</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#06101a;color:#f5f8fb;font-family:Arial,sans-serif}
-header{position:sticky;top:0;z-index:5;background:#081520;border-bottom:1px solid #263a50;padding:14px 20px;display:flex;align-items:center}.logo{font-size:25px;font-weight:900}.logo span{color:#159cff}.src{margin-left:auto;color:#8fa3b6;font-size:12px}
-.hero{padding:30px 5%;background:linear-gradient(90deg,#06101eee,#0b2d46cc)}h1{margin:0;font-size:35px}.sub{color:#9fb0c1;margin-top:7px}
-main{max-width:1500px;margin:auto;padding:18px}.days{display:flex;gap:8px;overflow:auto;padding-bottom:5px}.day{min-width:125px;padding:11px 8px;background:#101e2c;border:1px solid #294057;color:#fff;border-radius:12px;cursor:pointer}.day.active{background:#159cff;border-color:#159cff}.day b{display:block}.day small{color:#b4c1ce}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.btn{background:#101e2c;border:1px solid #294057;color:#e1e8ef;border-radius:9px;padding:10px 13px;cursor:pointer}.btn.active{background:#159cff;border-color:#159cff}
-.info{font-size:12px;color:#8fa3b6;margin:8px 0 14px}.match{display:grid;grid-template-columns:68px 150px 1fr 330px 50px;gap:12px;align-items:center;background:#101e2c;border:1px solid #243b52;border-radius:14px;padding:12px;margin:8px 0}
-.time{font-size:20px;font-weight:900}.comp{font-size:11px;color:#a7b6c5;font-weight:800}.teams{display:flex;align-items:center;justify-content:center;gap:18px}.team{text-align:center;font-weight:700;min-width:120px}.crest{width:48px;height:48px;object-fit:contain;margin:auto auto 5px;display:block;border-radius:8px;background:#1b2e41}.score{font-size:19px;font-weight:900}.channels{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}.ch{font-size:10px;font-weight:800;background:#07111c;border:1px solid #30475d;border-radius:7px;padding:6px}.detail{text-align:center;font-size:11px}.detail:empty{display:none}.live{color:#ff5c69;font-weight:900}.empty{padding:30px;text-align:center;color:#91a5b8;background:#0c1825;border:1px dashed #2a4057;border-radius:14px}
-@media(max-width:900px){.match{grid-template-columns:60px 1fr 45px}.comp{grid-column:2}.teams,.channels{grid-column:1/3}.teams{grid-row:2}.channels{justify-content:flex-start}.detail{grid-column:3;grid-row:1/4}.team{min-width:90px}}
-@media(max-width:550px){h1{font-size:28px}.match{padding:10px}.team{font-size:12px}.crest{width:42px;height:42px}}
-</style></head>
-<body>
-<header><div class="logo">IPTV<span>▶</span> FÚTBOL</div><div class="src">FUENTE: FÚTBOL TV</div></header>
-<section class="hero"><h1>PARTIDOS DE FÚTBOL</h1><div class="sub">Horarios y canales de televisión en España</div></section>
-<main><div id="days" class="days"></div>
-<div class="filters">
-<button class="btn active" onclick="fc('TODOS',this)">🏆 Todos</button>
-<button class="btn" onclick="fc('Liga EA Sports',this)">🇪🇸 LaLiga</button>
-<button class="btn" onclick="fc('Premier League',this)">🏴 Premier</button>
-<button class="btn" onclick="fc('Europa League',this)">🌍 Europa League</button>
-<button class="btn" onclick="fc('Serie A Italia',this)">🇮🇹 Serie A</button>
-<button class="btn" onclick="fc('Bundesliga',this)">🇩🇪 Bundesliga</button>
-<button class="btn" onclick="fc('Ligue 1',this)">🇫🇷 Ligue 1</button>
-<button class="btn" onclick="fc('Liga Hypermotion',this)">🇪🇸 Segunda</button>
-</div>
-<div class="info" id="status">Cargando…</div><div id="content"></div></main>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IPTV Fútbol</title><style>
+*{box-sizing:border-box}body{margin:0;background:#07111b;color:#f4f7fa;font-family:Arial,sans-serif}header{background:#091622;border-bottom:1px solid #24384d;padding:15px 22px;display:flex;align-items:center;position:sticky;top:0;z-index:5}.logo{font-size:25px;font-weight:900}.logo b{color:#159cff}.src{margin-left:auto;color:#91a3b5;font-size:12px}.hero{padding:28px 5%;background:#0b2235}h1{margin:0;font-size:34px}.sub{color:#9fb0c1;margin-top:6px}.wrap{max-width:1450px;margin:auto;padding:18px}.days{display:flex;gap:8px;overflow:auto;margin-bottom:14px}.day{min-width:125px;padding:11px;background:#101e2c;border:1px solid #2a4056;color:#fff;border-radius:11px;cursor:pointer}.day.active{background:#159cff;border-color:#159cff}.day b,.day small{display:block}.day small{color:#b8c5d1;margin-top:3px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.btn{background:#101e2c;color:#e4eaf0;border:1px solid #2a4056;border-radius:8px;padding:9px 12px;cursor:pointer}.btn.active{background:#159cff;border-color:#159cff}.status{font-size:12px;color:#91a4b6;margin-bottom:12px}.match{display:grid;grid-template-columns:65px 145px 1fr 330px;background:#101e2c;border:1px solid #243b52;border-radius:13px;padding:11px;margin:8px 0;align-items:center;gap:12px}.time{font-size:20px;font-weight:900}.comp{font-size:11px;font-weight:800;color:#aab9c8}.teams{display:flex;align-items:center;justify-content:center;gap:18px}.team{text-align:center;font-weight:700;min-width:120px}.crest{width:48px;height:48px;object-fit:contain;margin:0 auto 5px;display:block}.fallback{border-radius:50%;background:#1c3044;display:flex;align-items:center;justify-content:center;font-size:13px;color:#dce6ef}.channels{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}.ch{background:#07111b;border:1px solid #30465b;border-radius:7px;padding:6px;font-size:10px;font-weight:800}.empty{padding:30px;text-align:center;color:#91a4b6;border:1px dashed #2a4056;border-radius:13px}@media(max-width:900px){.match{grid-template-columns:60px 1fr}.comp{grid-column:2}.teams,.channels{grid-column:1/3}.teams{grid-row:2}.channels{justify-content:flex-start}.team{min-width:90px}}@media(max-width:550px){h1{font-size:28px}.team{font-size:12px}.crest{width:42px;height:42px}}
+</style></head><body><header><div class="logo">IPTV<b>▶</b> FÚTBOL</div><div class="src">AGENDA DE FÚTBOL</div></header><section class="hero"><h1>PARTIDOS DE FÚTBOL</h1><div class="sub">Horarios y canales de televisión en España</div></section><main class="wrap"><div id="days" class="days"></div><div class="filters" id="filters"></div><div id="status" class="status">Cargando agenda…</div><div id="content"></div></main>
 <script>
-let all=[],selected=today(),filter='TODOS';
-const daysEl=document.getElementById('days'), statusEl=document.getElementById('status'), contentEl=document.getElementById('content');
+let data=[],selected=today(),filter='TODOS';
+const daysEl=document.getElementById('days'),content=document.getElementById('content'),status=document.getElementById('status');
 function today(){let d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
-function add(s,n){let d=new Date(s+'T12:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}
+function add(d,n){let x=new Date(d+'T12:00:00');x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function dayname(d){return d===today()?'HOY':new Date(d+'T12:00:00').toLocaleDateString('es-ES',{weekday:'short'}).toUpperCase()}
-function drawDays(){daysEl.innerHTML=Array.from({length:7},(_,i)=>add(today(),i)).map(d=>`<button class="day ${d===selected?'active':''}" onclick="selected='${d}';drawDays();render()"><b>${dayname(d)}</b><small>${new Date(d+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short'})}</small></button>`).join('')}
-function fc(f,b){filter=f;document.querySelectorAll('.btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()}
-function logoUrl(name){
-  const n=encodeURIComponent(String(name||'').trim());
-  return [
-    `https://www.google.com/s2/favicons?domain=www.${n.toLowerCase().replace(/%20/g,'')}.com&sz=128`,
-    `https://ui-avatars.com/api/?name=${n}&background=182a3d&color=fff&size=96&bold=true`
-  ];
-}
-function img(u,name){
-  if(u) return `<img class="crest" src="${esc(u)}" alt="${esc(name)}" loading="lazy" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=182a3d&color=fff&size=96&bold=true'">`;
-  return `<div class="crest fallback">${esc((name||'⚽').split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase())}</div>`;
-}" onerror="this.onerror=null;this.outerHTML='<div class=&quot;crest&quot;>⚽</div>'">`:'<div class="crest">⚽</div>'}
-function card(m){let state=m.status==='live'?`<span class="live">🔴 EN DIRECTO</span>`:m.status==='finished'?'🏁 FINALIZADO':'';let score=m.score?`${m.score.home} - ${m.score.away}`:'VS';return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team">${img(m.homeLogo,m.home)}${esc(m.home)}</div><div class="score">${score}</div><div class="team">${img(m.awayLogo,m.away)}${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div><div class="detail">${state}</div></article>`}
-function render(){let x=all.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));let t=selected===today()?'HOY':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});contentEl.innerHTML=`<h2>${t}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día.</div>')}
-async function loadData(){
-  try{
-    const r=await fetch('matches.json?'+Date.now());
-    const j=await r.json();
-    all=Array.isArray(j)?j:[];
-    if(!all.length) throw new Error('empty');
-  }catch(e){
-    all=[];
-  }
-  drawDays();render();
-  statusEl.textContent=all.length?`Agenda actualizada · ${all.length} partidos cargados.`:'No se pudo cargar la agenda.';
-}
-loadData();;
+function initials(n){return esc((n||'⚽').split(' ').filter(Boolean).map(x=>x[0]).slice(0,2).join('').toUpperCase())}
+function dayLabel(d){return d===today()?'HOY':new Date(d+'T12:00:00').toLocaleDateString('es-ES',{weekday:'short'}).toUpperCase()}
+function drawDays(){daysEl.innerHTML=Array.from({length:7},(_,i)=>add(today(),i)).map(d=>`<button class="day ${d===selected?'active':''}" onclick="selected='${d}';drawDays();render()"><b>${dayLabel(d)}</b><small>${new Date(d+'T12:00:00').toLocaleDateString('es-ES',{day:'2-digit',month:'short'})}</small></button>`).join('')}
+const comps=[['TODOS','🏆 Todos'],['Liga EA Sports','🇪🇸 LaLiga'],['Premier League','🏴 Premier'],['Europa League','🌍 Europa'],['Serie A Italia','🇮🇹 Serie A'],['Bundesliga','🇩🇪 Bundesliga'],['Ligue 1','🇫🇷 Ligue 1'],['Liga Hypermotion','🇪🇸 Segunda'],['Primera Federación','🇪🇸 1ª Federación'],['Liga F','♀️ Liga F']];
+document.getElementById('filters').innerHTML=comps.map((x,i)=>`<button class="btn ${i===0?'active':''}" onclick="setFilter('${x[0]}',this)">${x[1]}</button>`).join('');
+function setFilter(x,b){filter=x;document.querySelectorAll('.btn').forEach(y=>y.classList.remove('active'));b.classList.add('active');render()}
+function card(m){return `<article class="match"><div class="time">${esc(m.time)}</div><div class="comp">${esc(m.competition)}</div><div class="teams"><div class="team"><div class="crest fallback">${initials(m.home)}</div>${esc(m.home)}</div><div class="score">VS</div><div class="team"><div class="crest fallback">${initials(m.away)}</div>${esc(m.away)}</div></div><div class="channels">${(m.channels||[]).map(c=>`<span class="ch">${esc(c)}</span>`).join('')}</div></article>`}
+function render(){let x=data.filter(m=>m.date===selected&&(filter==='TODOS'||m.competition===filter));let title=selected===today()?'HOY':new Date(selected+'T12:00:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});content.innerHTML=`<h2>${title}</h2>`+(x.length?x.map(card).join(''):'<div class="empty">No hay partidos para este día.</div>')}
+async function start(){try{const r=await fetch('matches.json?'+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();data=await r.json();if(!Array.isArray(data))throw Error();drawDays();render();status.textContent='Agenda cargada correctamente · '+data.length+' partidos';}catch(e){status.textContent='No se pudo cargar la agenda';content.innerHTML='<div class="empty">Error al cargar matches.json.</div>'}}
+start();
 </script></body></html>
