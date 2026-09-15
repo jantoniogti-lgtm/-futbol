@@ -1,13 +1,21 @@
-V15.2 — ESCUDOS REALES DE FÚTBOL TV
-====================================
+IPTV FÚTBOL V16 · DISEÑO DEPORTIVO + TELEVISIÓN
 
-Esta versión aplica los escudos directamente en la página.
+Esta versión mantiene la agenda y los escudos de Fútbol TV y añade una interfaz
+más deportiva, moderna y centrada en la programación televisiva.
 
-- Los escudos se cargan desde la misma CDN de imágenes que utiliza Fútbol TV.
-- Ya no se usa TheSportsDB en el navegador.
-- Ya no aparece el círculo/fondo detrás del escudo.
-- Los 58 partidos incluidos en matches.json tienen escudo local y visitante.
-- La agenda sigue usando matches.json para que la página no se quede en una pantalla infinita de carga.
-- Se mantienen los 7 días, filtros y canales.
+Incluye:
+- Diseño oscuro deportivo con estética de fútbol + TV.
+- Cabecera FÚTBOL TV.
+- Resumen de partidos, días y canales.
+- Selector de 7 días con número de partidos.
+- Filtros por competición.
+- Escudos sin círculos ni fondos añadidos.
+- Carga de logos desde logos.json y fallback por iniciales.
+- Horarios y canales.
+- Responsive para PC, móvil y tablet.
+- Fuente de programación: Fútbol TV.
 
-Para GitHub Pages: sube el contenido de esta carpeta al repositorio y activa GitHub Pages desde Settings > Pages.
+PUBLICACIÓN EN GITHUB PAGES:
+1. Sustituye los archivos de tu repositorio por los de este ZIP.
+2. Mantén matches.json y logos.json en la raíz.
+3. GitHub Pages servirá index.html automáticamente.
