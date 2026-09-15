@@ -1,20 +1,6 @@
-V15 - IPTV FÚTBOL
-==================
-Versión limpia y estable.
+V15.1 — ESCUDOS REALES
+========================
+La versión ahora intenta cargar el escudo real de cada equipo desde TheSportsDB.
+Mientras llega el escudo muestra las iniciales, por lo que nunca queda un hueco vacío.
 
-- La página NO consulta Fútbol TV desde el navegador.
-- Lee únicamente matches.json.
-- Si Fútbol TV o GitHub Actions tienen un problema, la página sigue abriendo con el último JSON guardado.
-- 7 días desde HOY.
-- Canales concretos de la agenda.
-- Sin "PRÓXIMO".
-- Sin reloj.
-- Sin pantalla de carga infinita.
-
-GitHub:
-1. Sube todos los archivos.
-2. Settings > Pages > Deploy from branch > main / root.
-3. La web funcionará aunque Actions falle.
-
-Los datos iniciales corresponden a la agenda publicada por Fútbol TV y se pueden actualizar con GitHub Actions.
-Fuente: https://www.futboltv.info/
+No depende de Fútbol TV para los escudos: Fútbol TV aporta la agenda y canales.
